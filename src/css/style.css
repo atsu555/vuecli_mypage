@@ -1,0 +1,378 @@
+body{
+  background-color: black;
+  color: #fff;
+}
+.img-60{
+  width: 60%;
+}
+.img-50{
+  width: 50%;
+}
+.img-500{
+  width: 500px;
+}
+
+/* header */
+header{
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0,0,0, 0.9);
+}
+header h1, header a{
+  color: #fff;
+}
+header h1{
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 300;
+  margin: 0;
+}
+.header-box{
+  padding: 3rem 10rem 0;
+  width: 100%;
+}
+.header-border{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px #fff;
+  padding-bottom: 5px;
+}
+.header-menu ul{
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding-top: 1.5rem;
+}
+.hmargin-right{
+  margin-right: 2rem;
+}
+.hmargin-right:last-child{
+  margin-right: 0;
+}
+.git-hub{
+  position: fixed;
+  right: 14rem;
+  top: 1.6rem;
+  width: 30px;
+}
+
+/* hamburgerbutton */
+.hamburger_btn {
+  position: fixed;
+  top: 1rem;
+  right: 9rem;
+  width: 70px;
+  height: 72px;
+  cursor: pointer;
+  z-index: 50;
+}
+.hamburger_btn ul{
+  display: column;
+}
+.hamburger_btn .line {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  text-align: center;
+}
+
+.hamburger_btn .line_01 {
+  top: 16px;
+  transition: 0.4s ease;
+}
+.hamburger_btn .line_02 {
+  top: 26px;
+  transition: 0.4s ease;
+}
+.hamburger_btn .line_03 {
+  top: 36px;
+  transition: 0.4s ease;
+}
+
+
+.btn_line01 {
+  transform: translateY(10px) rotate(-45deg);
+  transition: 0.4s ease;
+}
+.btn_line02 {
+  transition: 0.4s ease;
+  opacity: 0;
+}
+.btn_line03 {
+  transform: translateY(-10px) rotate(45deg);
+  transition: 0.4s ease;
+}
+
+
+/*サイドメニュー*/
+.menu-enter-active, .menu-leave-active {
+  transition: opacity 0.6s;
+}
+.menu-enter, .menu-leave-to {
+  opacity: 0;
+}
+
+.menu li {
+  list-style: none;
+  line-height: 1;
+  padding: 1rem;
+}
+.menu {
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 30;
+  padding: 2rem 1rem;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 100px;
+  font-weight: 700;
+  text-shadow: 25px 25px 30px #fff;
+  padding: 0 2rem;
+}
+.menu ul{
+  text-align: center;
+  margin: 3rem 0;
+  padding: 0;
+}
+
+
+
+
+/* main */
+.top-page{
+  z-index: 50;
+}
+
+.title h1{
+  font-size: 180px;
+  font-weight: 700;
+  text-shadow: 25px 25px 30px #fff;
+}
+
+.main-img img{
+  object-fit: cover;
+}
+
+/* profile */
+#profile{
+  padding: 10rem 0;
+}
+#profile h1{
+  text-align: right;
+  padding-bottom: 5rem;
+}
+#profile h2{
+  font-size: 85px;
+}
+#profile h3{
+  font-size: 45px;
+}
+#profile p{
+  font-size: 19px;
+  line-height: 1.8;
+  padding: 1.5rem;
+}
+.profile-text{
+  padding: 1rem;
+}
+
+/* skills */
+#skills{
+  padding: 10rem 0;
+}
+#skills h1{
+  padding-bottom: 2rem;
+}
+.skills-data{
+  border: solid 1px #fff;
+  width: 500px;
+  text-align: center;
+  padding: 2rem;
+}
+.img-box{
+  padding: 2rem;
+}
+.text-box{
+  text-align: left;
+}
+.text-box h2{
+  padding: 1rem 0;
+}
+.text-box p{
+  line-height: 1.8;
+}
+.html-box, .ps-box{
+  margin: 0 0 0 auto;
+}
+.js-box, .ps-box, .xd-box{
+  margin-top: -15rem;
+}
+
+/* works */
+#works{
+  padding: 10rem 0;
+}
+.works-items{
+  padding: 5rem 0;
+
+}
+.works-item1{
+  width: 500px;
+  margin-bottom: 3rem;
+}
+.works-item2{
+  width: 500px;
+  margin: 0 0 0 auto;
+  margin-top: -10rem;
+}
+.works-item2 h2{
+  text-align: left;
+}
+.w-text{
+  padding: 1rem 0;
+}
+
+
+/* contact */
+#contact{
+  background-image: url(../assets/mybike-sirokuro.png);
+  background-size: cover;
+}
+#contact{
+  text-align: center;
+}
+#contact h1{
+  padding: 2rem 0;
+}
+.contact-box{
+  padding: 5rem 0 8rem;
+}
+.name{
+  width: 800px;
+  height: 60px;
+  color: #fff;
+  background: rgba(255,255,255,0.4);
+  border: solid 1px #fff;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+}
+.name::placeholder{
+  color: #fff;
+}
+.message::placeholder{
+  color: #fff;
+  font-size: 1.5rem;
+}
+.message{
+  width: 800px;
+  height: 300px;
+  color: #fff;
+  background: rgba(255,255,255,0.4);
+  border: solid 1px #fff;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 0.5rem 0 0 1rem;
+  margin-bottom: 2rem;
+}
+.send{
+  width: 150px;
+  height: 60px;
+  background: none;
+  color: #fff;
+  border: solid 1px #fff;
+  border-radius: 20px;
+}
+
+.fade-in{
+  font-size:40px;
+  opacity:0;
+  animation-name:sample02;
+  animation-duration:5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes sample02 {
+0% {
+ opacity: 0;
+ transform: translateX(-50px);
+}
+50%{
+    opacity: 0.5;
+    transform: translateX(0);
+  }
+ 100% {
+ opacity:1;
+ transform: translateX(50px);
+ }
+}
+
+.fade1{
+  opacity: 0;
+  animation-name: my-text;
+  animation-duration: 2s;
+  /* animation-iteration-count: infinite; */
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes my-text{
+  0%{
+    opacity: 0;
+    transform: translateX(-300px)
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade2{
+  opacity: 0;
+  animation-name: my-picture;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes my-picture{
+  0%{
+    opacity: 0;
+    transform: translateX(300px)
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade3{
+  opacity: 0;
+  animation-name: title-fade;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes title-fade{
+  0%{
+    opacity: 0;
+    transform: translateY(-100px)
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.a{
+  opacity: 0;
+}
+
