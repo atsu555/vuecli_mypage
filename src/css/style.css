@@ -147,6 +147,8 @@ header h1{
 /* main */
 .top-page{
   z-index: 50;
+  background-color: black;
+  color: #fff;
 }
 
 .title h1{
