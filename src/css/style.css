@@ -465,6 +465,7 @@ header h1{
     font-size: 75px;
     text-shadow: 18px 18px 20px #fff;
   }
+  /* ヘッダー */
   header h1{
     font-size: 30px;
   }
@@ -472,12 +473,19 @@ header h1{
     top: 0.6rem;
     right: 2rem;
   }
+  .menu a {
+    font-size: 65px;
+    font-weight: 700;
+    text-shadow: 20px 20px 20px #fff;
+    padding: 0 2rem;
+  }
   .main-img img{
     margin-top: 3rem;
   }
   /* profile */
   #profile h2{
     font-size: 60px;
+    padding: 0.5rem;
   }
   #profile h3{
     font-size: 25px;
@@ -488,7 +496,7 @@ header h1{
     padding: 0.5rem;
   }
   .profile-text{
-    padding: 0.5rem;
+    padding: 1rem;
   }
   /* skills */
   .skills-data{
