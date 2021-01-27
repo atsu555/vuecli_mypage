@@ -39,7 +39,7 @@
             <div
             v-observe-visibility="visibilityChangedme"
             v-bind:class="[isVisibleme === true ? 'fade2' : 'a']"
-            class="col-md-7">
+            class="col-md-7 profile-img">
               <img src="../assets/my-picture1.png" alt="橘川" class="img-fluid">
             </div>
           </div>
@@ -179,7 +179,6 @@
 </style>
 
 <script>
-/ * eslint-disable * /
 export default {
   name: 'HomePage',
   data (){
