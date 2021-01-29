@@ -32,6 +32,130 @@
   </div>
 </template>
 
+<style scoped>
+.top-page{
+  z-index: 50;
+}
+
+.title h1{
+  font-size: 180px;
+  font-weight: 700;
+  text-shadow: 25px 25px 30px #fff;
+}
+/* Profilepage */
+.About h1{
+  margin: 5rem 0 5rem 130px;
+}
+.about-img{
+  text-align: right;
+}
+.about-me{
+  display: flex;
+  position: relative;
+  right: 0;
+  margin-left: 200px;
+  margin-right: 0;
+  background-color: black;
+}
+.about-text{
+  position: absolute;
+  top: 19rem;
+  left: -4rem;
+  z-index: 20;
+}
+.about-text h3{
+  padding-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+.about-text p{
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 1rem 0 1.5rem;
+}
+/* アニメーション */
+.fade-in{
+  font-size:40px;
+  opacity:0;
+  animation-name:sample02;
+  animation-duration:5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes sample02 {
+0% {
+ opacity: 0;
+ transform: translateX(-50px);
+}
+50%{
+    opacity: 0.5;
+    transform: translateX(0);
+  }
+ 100% {
+ opacity:1;
+ transform: translateX(50px);
+ }
+}
+
+.fade1{
+  opacity: 0;
+  animation-name: my-text;
+  animation-duration: 2s;
+  /* animation-iteration-count: infinite; */
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes my-text{
+  0%{
+    opacity: 0;
+    transform: translateX(-300px)
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade2{
+  opacity: 0;
+  animation-name: my-picture;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes my-picture{
+  0%{
+    opacity: 0;
+    transform: translateX(300px)
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade3{
+  opacity: 0;
+  animation-name: title-fade;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes title-fade{
+  0%{
+    opacity: 0;
+    transform: translateY(-100px)
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.a{
+  opacity: 0;
+}
+
+</style>
+
 <script>
 export default {
   name: 'ProfilePage',

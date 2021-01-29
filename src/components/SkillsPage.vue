@@ -83,6 +83,129 @@
     </div>
   </div>
 </template>
+<style scoped>
+.top-page{
+  z-index: 50;
+}
+
+.title h1{
+  font-size: 180px;
+  font-weight: 700;
+  text-shadow: 25px 25px 30px #fff;
+}
+.title2-box h1{
+  margin: 5rem 0;
+  font-size: 140px;
+}
+.title2-box{
+  margin: 6rem 1.5rem;
+}
+/* SkillsPage */
+.skills-contents{
+  padding-top: 5rem;
+}
+.skills-title p{
+  font-size: 1.7rem;
+  padding: 1.5rem 0.5rem;
+  margin: 0;
+}
+
+.skill-box{
+  display: flex;
+  margin: 3rem 0;
+}
+.skill-img{
+  padding: 2rem;
+}
+.skill-html{
+  padding: 2rem 5rem;
+}
+.design h1{
+  text-align: right;
+}
+/* アニメーション */
+.fade-in{
+  font-size:40px;
+  opacity:0;
+  animation-name:sample02;
+  animation-duration:5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes sample02 {
+0% {
+ opacity: 0;
+ transform: translateX(-50px);
+}
+50%{
+    opacity: 0.5;
+    transform: translateX(0);
+  }
+ 100% {
+ opacity:1;
+ transform: translateX(50px);
+ }
+}
+
+.fade1{
+  opacity: 0;
+  animation-name: my-text;
+  animation-duration: 2s;
+  /* animation-iteration-count: infinite; */
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes my-text{
+  0%{
+    opacity: 0;
+    transform: translateX(-300px)
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade2{
+  opacity: 0;
+  animation-name: my-picture;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes my-picture{
+  0%{
+    opacity: 0;
+    transform: translateX(300px)
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade3{
+  opacity: 0;
+  animation-name: title-fade;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes title-fade{
+  0%{
+    opacity: 0;
+    transform: translateY(-100px)
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.a{
+  opacity: 0;
+}
+
+</style>
 
 <script>
 export default {

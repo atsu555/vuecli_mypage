@@ -179,6 +179,431 @@
 </template>
 
 <style scoped>
+/* main */
+.top-page{
+  z-index: 50;
+}
+
+.title h1{
+  font-size: 180px;
+  font-weight: 700;
+  text-shadow: 25px 25px 30px #fff;
+}
+
+.main-img img{
+  object-fit: cover;
+}
+
+/* profile */
+#profile{
+  padding: 10rem 0;
+}
+#profile h1{
+  text-align: right;
+  padding-bottom: 5rem;
+}
+#profile h2{
+  font-size: 85px;
+}
+#profile h3{
+  font-size: 45px;
+}
+#profile p{
+  font-size: 19px;
+  line-height: 1.6;
+  padding: 1.5rem;
+}
+.profile-text{
+  padding: 1rem;
+}
+.read-more{
+  text-align: center;
+}
+.read-more a{
+  background-color: #000;
+  border: white 1px solid;
+  color: #fff;
+  padding: 1rem 1rem;
+  text-decoration: none;
+}
+.read-more a:hover{
+  background-color: rgba(255,255,255,0.4);
+}
+
+/* skills */
+#skills{
+  padding: 10rem 0;
+}
+#skills h1{
+  padding-bottom: 2rem;
+}
+.skills-data{
+  border: solid 1px #fff;
+  width: 500px;
+  text-align: center;
+  padding: 2rem;
+}
+.img-box{
+  padding: 2rem;
+}
+.text-box{
+  text-align: left;
+}
+.text-box h2{
+  padding: 1rem 0;
+}
+.text-box p{
+  line-height: 1.8;
+}
+.html-box, .ps-box{
+  margin: 0 0 0 auto;
+}
+.js-box, .ps-box, .xd-box{
+  margin-top: -15rem;
+}
+
+/* works */
+#works{
+  padding: 10rem 0;
+}
+.works-items{
+  padding: 5rem 0;
+  width: 1000px;
+  margin: 0 auto;
+}
+.works-item1{
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.w-text{
+  padding: 1rem 0;
+}
+.more-works{
+  text-align: center;
+}
+.more-works a{
+  background-color: #000;
+  border: white 1px solid;
+  color: #fff;
+  padding: 1rem 3rem;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 300;
+}
+.more-works a:hover{
+  background-color: rgba(255,255,255,0.4);
+}
+
+
+/* contact */
+#contact{
+  background-color: black;
+  text-align: center;
+}
+#contact h1{
+  padding: 2rem 0;
+}
+.contact-box{
+  padding: 5rem 0 8rem;
+}
+.name{
+  width: 800px;
+  height: 60px;
+  color: #fff;
+  background: rgba(255,255,255,0.4);
+  border: solid 1px #fff;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+}
+.name::placeholder{
+  color: #fff;
+}
+.message::placeholder{
+  color: #fff;
+  font-size: 1.5rem;
+}
+.message{
+  width: 800px;
+  height: 300px;
+  color: #fff;
+  background: rgba(255,255,255,0.4);
+  border: solid 1px #fff;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 0.5rem 0 0 1rem;
+  margin-bottom: 2rem;
+}
+.send{
+  width: 150px;
+  height: 60px;
+  background: none;
+  color: #fff;
+  border: solid 1px #fff;
+  border-radius: 20px;
+}
+
+
+/* アニメーション */
+.fade-in{
+  font-size:40px;
+  opacity:0;
+  animation-name:sample02;
+  animation-duration:5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes sample02 {
+0% {
+ opacity: 0;
+ transform: translateX(-50px);
+}
+50%{
+    opacity: 0.5;
+    transform: translateX(0);
+  }
+ 100% {
+ opacity:1;
+ transform: translateX(50px);
+ }
+}
+
+.fade1{
+  opacity: 0;
+  animation-name: my-text;
+  animation-duration: 2s;
+  /* animation-iteration-count: infinite; */
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes my-text{
+  0%{
+    opacity: 0;
+    transform: translateX(-300px)
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade2{
+  opacity: 0;
+  animation-name: my-picture;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes my-picture{
+  0%{
+    opacity: 0;
+    transform: translateX(300px)
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade3{
+  opacity: 0;
+  animation-name: title-fade;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes title-fade{
+  0%{
+    opacity: 0;
+    transform: translateY(-100px)
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.a{
+  opacity: 0;
+}
+
+@media screen and (max-width: 1200px){
+  #profile h2{
+    font-size: 80px;
+  }
+  #profile h3{
+    font-size: 35px;
+  }
+  #profile p{
+    font-size: 17px;
+    line-height: 1.6;
+    padding: 0.8rem;
+  }
+  .profile-text{
+    padding: 0.8rem;
+  }
+  /* skills */
+  .img-box{
+    padding: 2rem;
+  }
+  .html-box, .ps-box, .js-box, .xd-box{
+    margin: 5rem auto;
+  }
+  .js-box, .ps-box, .xd-box{
+    margin-top: 0;
+  }
+  /* works */
+  .works-item1{
+    margin: 5rem auto;
+  }
+}
+@media screen and (max-width: 900px){
+  .title h1{
+    font-size: 150px;
+    text-shadow: 20px 20px 25px #fff;
+  }
+  .main-img img{
+    margin-top: 2rem;
+  }
+  /* ヘッダー */
+  .header-menu, .git-hub{
+    display: none;
+  }
+  .hamburger_btn{
+    top: 2rem;
+    right: 3rem;
+  }
+  .header-box {
+    padding: 1rem 3rem 0;
+  }
+  /* profile */
+  #profile h2{
+    font-size: 70px;
+  }
+  #profile h3{
+    font-size: 30px;
+  }
+  #profile p{
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 0.5rem;
+  }
+  .profile-text{
+    padding: 0.5rem;
+  }
+  /* contact */
+  .name{
+    width: 500px;
+    height: 60px;
+    font-size: 1.3rem;
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+  }
+  .message{
+    width: 500px;
+    height: 300px;
+    font-size: 1.3rem;
+    padding: 0.5rem 0 0 1rem;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 767px){
+  .profile-img{
+    display: none;
+  }
+}
+@media screen and (max-width: 500px){
+  #profile, #skills, #works{
+    padding: 5rem 0;
+  }
+  .title h1{
+    font-size: 75px;
+    text-shadow: 18px 18px 20px #fff;
+  }
+  /* ヘッダー */
+  header h1{
+    font-size: 30px;
+  }
+  .hamburger_btn{
+    top: 1.6rem;
+  }
+  .menu a {
+    font-size: 65px;
+    font-weight: 700;
+    text-shadow: 20px 20px 20px #fff;
+    padding: 0 2rem;
+  }
+  .main-img img{
+    margin-top: 3rem;
+  }
+  /* profile */
+  #profile h2{
+    font-size: 60px;
+    padding: 0.5rem;
+  }
+  #profile h3{
+    font-size: 25px;
+  }
+  #profile p{
+    font-size: 13px;
+    line-height: 1.6;
+    padding: 0.5rem;
+  }
+  .profile-text{
+    padding: 1rem;
+  }
+  /* skills */
+  .skills-data{
+    width: 300px;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  .text-box h2{
+    padding: 0.8rem 0;
+    font-size: 25px;
+  }
+  .text-box p{
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  .img-box{
+    padding: 2rem;
+  }
+  .html-box, .ps-box, .js-box, .xd-box{
+    margin: 4rem auto;
+  }
+  .js-box, .ps-box, .xd-box{
+    margin-top: 0;
+  }
+  /* works */
+
+  /* contact */
+  .name{
+    width: 280px;
+    height: 50px;
+    font-size: 1.2rem;
+    padding-left: 1rem;
+  }
+  .message{
+    width: 280px;
+    height: 300px;
+    font-size: 1.2rem;
+    padding: 0.5rem 0 0 1rem;
+  }
+  /* works */
+  #works h2{
+    font-size: 25px;
+  }
+  .works-item1{
+    width: 290px;
+  }
+  .works-item2{
+    width: 290px;
+  }
+  .works-items{
+    padding: 3rem 0;
+  }
+}
 
 </style>
 

@@ -45,6 +45,145 @@
     </header>
 </template>
 
+<style scoped>
+/* header */
+header{
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0,0,0, 0.9);
+}
+header h1, header a{
+  color: #fff;
+}
+header a:hover{
+  color: #fff;
+}
+header h1{
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 300;
+  margin: 0;
+}
+.header-box{
+  padding: 3rem 8rem 0;
+  width: 100%;
+}
+.header-border{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px #fff;
+  padding-bottom: 5px;
+}
+.header-menu ul{
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding-top: 1.5rem;
+}
+.hmargin-right{
+  margin-right: 2rem;
+}
+.hmargin-right:last-child{
+  margin-right: 0;
+}
+.git-hub{
+  position: fixed;
+  right: 12rem;
+  top: 1.6rem;
+  width: 30px;
+}
+
+/* hamburgerbutton */
+.hamburger_btn {
+  position: fixed;
+  top: 1.8rem;
+  right: 8rem;
+  cursor: pointer;
+  z-index: 50;
+  width: 32px;
+  height: 26px;
+}
+.hamburger_btn ul{
+  display: column;
+}
+.hamburger_btn .line {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  text-align: center;
+}
+
+.hamburger_btn .line_01 {
+  top: 0px;
+  transition: 0.4s ease;
+}
+.hamburger_btn .line_02 {
+  top: 10px;
+  transition: 0.4s ease;
+}
+.hamburger_btn .line_03 {
+  top: 20px;
+  transition: 0.4s ease;
+}
+
+
+.btn_line01 {
+  transform: translateY(10px) rotate(-45deg);
+  transition: 0.4s ease;
+}
+.btn_line02 {
+  transition: 0.4s ease;
+  opacity: 0;
+}
+.btn_line03 {
+  transform: translateY(-10px) rotate(45deg);
+  transition: 0.4s ease;
+}
+
+
+/*サイドメニュー*/
+.menu-enter-active, .menu-leave-active {
+  transition: opacity 0.6s;
+}
+.menu-enter, .menu-leave-to {
+  opacity: 0;
+}
+
+.menu li {
+  list-style: none;
+  line-height: 1;
+  padding: 1rem;
+}
+.menu {
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 30;
+  padding: 2rem 1rem;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 100px;
+  font-weight: 700;
+  text-shadow: 25px 25px 30px #fff;
+  padding: 0 2rem;
+}
+.menu ul{
+  text-align: center;
+  margin: 3rem 0;
+  padding: 0;
+}
+
+</style>
+
 <script>
 export default {
   name: 'HeaderMenu',

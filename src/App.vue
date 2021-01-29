@@ -23,5 +23,24 @@ export default {
 <style scope>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap');
-@import "./css/style.css";
+.contents{
+  background-color: black;
+  color: #fff;
+  padding: 10rem 0;
+}
+.contents a{
+  text-decoration: none;
+}
+.img-60{
+  width: 60%;
+}
+.img-50{
+  width: 50%;
+}
+.img-500{
+  width: 500px;
+}
+.img-350{
+  width: 350px;
+}
 </style>
