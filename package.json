@@ -14,7 +14,10 @@
   "dependencies": {
     "bootstrap": "^4.6.0",
     "bootstrap-vue": "^2.21.2",
+    "hooper": "^0.3.4",
+    "swiper": "^6.4.9",
     "vue": "^2.6.12",
+    "vue-awesome-swiper": "^4.1.1",
     "vue-observe-visibility": "^1.0.0",
     "vue-router": "^3.0.1"
   },

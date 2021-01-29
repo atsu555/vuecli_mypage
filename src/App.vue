@@ -1,14 +1,15 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <header-menu></header-menu>
-    </div>
+    <div class="contents">
+      <div id="nav">
+        <header-menu></header-menu>
+      </div>
      <router-view/>
+    </div>
   </div>
 </template>
 
 <script>
-
 import HeaderMenu from '@/components/HeaderMenu'
 
 export default {

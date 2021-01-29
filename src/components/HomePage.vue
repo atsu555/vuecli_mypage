@@ -35,6 +35,13 @@
                 間になりたいと思い、プログラミング学習を始める。<br>
                 本気でWeb業界で仕事をするために、2020年12月に航空自衛隊を退職。
               </p>
+              <div>
+                <div class="read-more">
+                  <router-link to="/profile">
+                      read more
+                  </router-link>
+                </div>
+              </div>
             </div>
             <div
             v-observe-visibility="visibilityChangedme"
@@ -120,11 +127,11 @@
     </div>
     <!-- works -->
     <div id="works">
-      <div class="container works-box">
+      <div class="works-box">
         <div
         v-observe-visibility="visibilityChanged03"
         v-bind:class="[isVisible03 === true ? 'fade3' : 'a']"
-        class="title">
+        class="container title">
             <h1>Works</h1>
         </div>
         <div class="works-items">
@@ -132,17 +139,14 @@
             <div class="w-img">
               <img src="../assets/schoolLP.jpg" alt="オンラインスクール" class="img-fluid">
             </div>
-            <div class="w-text">
+            <!-- <div class="w-text">
               <h2>WEBデザインスクールLP</h2>
-            </div>
+            </div> -->
           </div>
-          <div class="works-item2">
-            <div class="w-img">
-              <img src="../assets/dental.jpg" alt="歯医者" class="img-fluid">
-            </div>
-            <div class="w-text">
-              <h2>矯正歯科LP</h2>
-            </div>
+          <div class="more-works">
+            <router-link to="/works">
+                詳細
+            </router-link>
           </div>
         </div>
       </div>
