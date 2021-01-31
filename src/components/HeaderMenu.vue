@@ -181,7 +181,37 @@ header h1{
   margin: 3rem 0;
   padding: 0;
 }
-
+@media screen and (max-width: 900px){
+/* ヘッダー */
+  .header-menu, .git-hub{
+    display: none;
+  }
+  .hamburger_btn{
+    top: 2rem;
+    right: 3rem;
+  }
+  .header-box {
+    padding: 1rem 3rem 0;
+  }
+}
+@media screen and (max-width: 500px){
+  /* ヘッダー */
+  header h1{
+    font-size: 30px;
+  }
+  .hamburger_btn{
+    top: 1.6rem;
+  }
+  .menu a {
+    font-size: 65px;
+    font-weight: 700;
+    text-shadow: 20px 20px 20px #fff;
+    padding: 0 2rem;
+  }
+  .main-img img{
+    margin-top: 3rem;
+  }
+}
 </style>
 
 <script>

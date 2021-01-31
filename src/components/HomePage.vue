@@ -139,14 +139,6 @@
             <div class="w-img">
               <img src="../assets/schoolLP.jpg" alt="オンラインスクール" class="img-fluid">
             </div>
-            <!-- <div class="w-text">
-              <h2>WEBデザインスクールLP</h2>
-            </div> -->
-          </div>
-          <div class="more-works">
-            <router-link to="/works">
-                詳細
-            </router-link>
           </div>
         </div>
       </div>
@@ -268,15 +260,10 @@
 }
 .works-items{
   padding: 5rem 0;
-  width: 1000px;
   margin: 0 auto;
 }
 .works-item1{
   margin-bottom: 3rem;
-  text-align: center;
-}
-.w-text{
-  padding: 1rem 0;
 }
 .more-works{
   text-align: center;
@@ -465,17 +452,6 @@
   .main-img img{
     margin-top: 2rem;
   }
-  /* ヘッダー */
-  .header-menu, .git-hub{
-    display: none;
-  }
-  .hamburger_btn{
-    top: 2rem;
-    right: 3rem;
-  }
-  .header-box {
-    padding: 1rem 3rem 0;
-  }
   /* profile */
   #profile h2{
     font-size: 70px;
@@ -520,22 +496,7 @@
     font-size: 75px;
     text-shadow: 18px 18px 20px #fff;
   }
-  /* ヘッダー */
-  header h1{
-    font-size: 30px;
-  }
-  .hamburger_btn{
-    top: 1.6rem;
-  }
-  .menu a {
-    font-size: 65px;
-    font-weight: 700;
-    text-shadow: 20px 20px 20px #fff;
-    padding: 0 2rem;
-  }
-  .main-img img{
-    margin-top: 3rem;
-  }
+
   /* profile */
   #profile h2{
     font-size: 60px;
