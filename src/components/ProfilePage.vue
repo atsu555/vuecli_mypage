@@ -11,17 +11,17 @@
           <div class="about-text">
             <h2>橘川 夏隆</h2>
             <h3>Kikkawa Atsutaka</h3>
-            <p>
-              22歳。東京都在住。Webデザイナー・コーダー志望で勉強と<br>
+            <p class="info">
+              22歳。東京都在住。Webデザイナー・コーダー志望で勉強と
               就職活動をしています。(2021年1月時点)
             </p>
-            <p>
-              2018年3月に航空自衛隊に入隊し、調達員として入間基地で<br>
-              勤務をしていました。コロナウイルスが流行し始めた際に、ス<br>
-              キルを身につけてどんな時代にも適応できる市場価値の高い人<br>
-              材になりたいと思い、プログラミングの学習を始めました。<br>
-              Web業界に本格的に就職したいと考え、自衛隊の退職を決意<br>
-              し、現在はWebデザインやコーディングをしたりしながら東京<br>
+            <p class="info">
+              2018年3月に航空自衛隊に入隊し、調達員として入間基地で
+              勤務をしていました。コロナウイルスが流行し始めた際に、ス
+              キルを身につけてどんな時代にも適応できる市場価値の高い人
+              材になりたいと思い、プログラミングの学習を始めました。
+              Web業界に本格的に就職したいと考え、自衛隊の退職を決意
+              し、現在はWebデザインやコーディングをしたりしながら東京
               を中心に就職活動をしています。
             </p>
           </div>
@@ -44,34 +44,25 @@
 }
 /* Profilepage */
 .About h1{
-  margin: 5rem 0 5rem 130px;
+  margin: 5rem 0 5rem 5rem;
 }
 .about-img{
-  text-align: right;
+  flex: 3;
 }
 .about-me{
   display: flex;
-  position: relative;
-  right: 0;
-  margin-left: 200px;
-  margin-right: 0;
-  background-color: black;
+}
+.about-me h3{
+  font-family: 'Noto Serif JP', serif;
 }
 .about-text{
-  position: absolute;
-  top: 19rem;
-  left: -4rem;
-  z-index: 20;
+  flex: 1;
+  padding-top: 8rem;
 }
-.about-text h3{
-  padding-bottom: 0.5rem;
-  font-size: 1.4rem;
+.about-me{
+  margin-left: 5rem;
 }
-.about-text p{
-  font-size: 0.9rem;
-  line-height: 1.6;
-  margin: 1rem 0 1.5rem;
-}
+
 /* アニメーション */
 .fade-in{
   font-size:40px;
@@ -153,7 +144,74 @@
 .a{
   opacity: 0;
 }
-
+@media screen and (max-width: 1100px) {
+  .about-text{
+    top: 12rem;
+  }
+  .about-text h2{
+    font-size: 1.5rem;
+  }
+  .about-text h3{
+    font-size: 1.1rem;
+  }
+  .about-text p{
+    font-size: 0.6rem;
+    margin: 0.8rem 0 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .title h1{
+    font-size: 150px;
+    text-shadow: 20px 20px 25px #fff;
+  }
+  .About h1{
+    margin: 5rem 0 5rem 2rem;
+  }
+  .about-img{
+    flex: 3;
+  }
+  .about-me{
+    display: flex;
+  }
+  .about-me p{
+    line-height: 1.7;
+  }
+  .about-text{
+    flex: 1;
+    padding-top: 2rem;
+  }
+  .about-me{
+    margin-left: 2rem;
+  }
+}
+@media screen and (max-width: 500px){
+  .About{
+    padding-bottom: 10rem;
+  }
+  .title h1{
+    font-size: 70px;
+    text-shadow: 10px 10px 15px #fff;
+  }
+  .about-me{
+    margin-left: 2rem;
+  }
+  .about-text{
+    padding-top: 3rem;
+    flex: 1;
+  }
+  .about-img{
+    flex: 4;
+  }
+  .about-text h2{
+    font-size: 1rem;
+  }
+  .about-text h3{
+    font-size: 0.5rem;
+  }
+  .info{
+    display: none;
+  }
+}
 </style>
 
 <script>

@@ -43,4 +43,9 @@ export default {
 .img-350{
   width: 350px;
 }
+@media screen and (max-width: 500px){
+  .contents{
+    padding: 1rem 0;
+  }
+}
 </style>

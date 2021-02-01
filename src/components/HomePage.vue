@@ -127,20 +127,40 @@
     </div>
     <!-- works -->
     <div id="works">
-      <div class="works-box">
+      <div class="container works-box">
         <div
         v-observe-visibility="visibilityChanged03"
         v-bind:class="[isVisible03 === true ? 'fade3' : 'a']"
-        class="container title">
+        class="title">
             <h1>Works</h1>
         </div>
-        <div class="works-items">
-          <div class="works-item1">
-            <div class="w-img">
-              <img src="../assets/schoolLP.jpg" alt="オンラインスクール" class="img-fluid">
-            </div>
-          </div>
-        </div>
+        <swiper
+          ref="mySwiper"
+          :options="swiperOption"
+          class="slide"
+        >
+          <swiper-slide>
+            <a href="">
+              <img src="../assets/schoolLP.jpg" alt="デザインスクール" class="img-fluid">
+              <h2>WebデザインスクールLP</h2>
+            </a>
+          </swiper-slide>
+          <swiper-slide>
+            <a href="">
+              <img src="../assets/dental.jpg" alt="歯科LP" class="img-fluid">
+              <h2>歯科矯正LP</h2>
+            </a>
+          </swiper-slide>
+          <swiper-slide>
+            <a href="">
+              <img src="../assets/img1.jpg" alt="バイク" class="img-fluid">
+              <h2>バイク</h2>
+            </a>
+          </swiper-slide>
+          <!-- <div class="swiper-pagination" slot="pagination"></div> -->
+          <div slot="button-prev" class="swiper-button-prev"></div>
+          <div slot="button-next" class="swiper-button-next"></div>
+        </swiper>
       </div>
     </div>
     <!-- contact -->
@@ -215,7 +235,7 @@
   background-color: #000;
   border: white 1px solid;
   color: #fff;
-  padding: 1rem 1rem;
+  padding: 0.8rem 0.8rem;
   text-decoration: none;
 }
 .read-more a:hover{
@@ -279,6 +299,27 @@
 }
 .more-works a:hover{
   background-color: rgba(255,255,255,0.4);
+}
+.slide{
+  margin: 10rem 0;
+}
+.slide a{
+  color: #fff;
+  text-align: center;
+}
+.slide a:hover{
+  text-decoration: none;
+  opacity: 0.8;
+}
+.slide img{
+  padding: 3rem 5rem;
+}
+.slide h2{
+  padding: 0;
+}
+
+.swiper-button-prev, .swiper-button-next{
+  color: #fff;
 }
 
 
@@ -367,7 +408,7 @@
 @keyframes my-text{
   0%{
     opacity: 0;
-    transform: translateX(-300px)
+    transform: translateX(-200px)
   }
   100%{
     opacity: 1;
@@ -385,7 +426,7 @@
 @keyframes my-picture{
   0%{
     opacity: 0;
-    transform: translateX(300px)
+    transform: translateX(200px)
   }
   100%{
     opacity: 1;
@@ -467,6 +508,14 @@
   .profile-text{
     padding: 0.5rem;
   }
+  .read-more a{
+  padding: 0.6rem 0.6rem;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+.read-more a:hover{
+  background-color: rgba(255,255,255,0.4);
+}
   /* contact */
   .name{
     width: 500px;
@@ -564,6 +613,16 @@
   .works-items{
     padding: 3rem 0;
   }
+  .slide{
+    margin: 5rem 0;
+  }
+  .slide h2{
+    font-size: 15px;
+  }
+  .slide img{
+    padding: 0.5rem 3.5rem;
+  }
+
 }
 
 </style>
@@ -583,7 +642,26 @@ export default {
         isVisiblehtml: false,
         isVisiblejs: false,
         isVisibleps: false,
-        isVisiblexd: false
+        isVisiblexd: false,
+        swiperOption: {
+        speed: 2000,//スライドの切り替わりスピード
+        spaceBetween: 30,//各スライドの余白
+        centeredSlides: true,//スライダーを真ん中に
+        loop: true, //無限ループ
+        slidesPerView: 1,
+        autoplay: { //スライドの自動切り替え
+          delay: 1000,//スライドの自動切り替えの秒数
+          disableOnInteraction: false//何らかのアクション後の自動切り替えを再開
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
+        // pagination: {
+        //   el: '.swiper-pagination',
+        //   clickable: true
+        // },
+        }
     }
   },
   methods: {

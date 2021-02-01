@@ -24,7 +24,7 @@
         </div>
         <div class="skill-box">
           <div class="skill-img">
-            <img src="../assets/icon-htmlcss.png" art="HTML" class="img-350">
+            <img src="../assets/icon-htmlcss.png" art="HTML" class="img-fluid">
           </div>
           <div class="skill-html">
             <h2>HTML5/CSS3</h2>
@@ -36,7 +36,7 @@
         </div>
         <div class="skill-box">
           <div class="skill-img">
-            <img src="../assets/logo.png" art="JavaScript" class="img-350">
+            <img src="../assets/logo.png" art="JavaScript" class="img-fluid">
           </div>
           <div class="skill-html">
             <h2>JavaScript/Vue.js</h2>
@@ -58,7 +58,7 @@
         </div>
         <div class="skill-box">
           <div class="skill-img">
-            <img src="../assets/icon-photoshop.png" art="Photoshop" class="img-350">
+            <img src="../assets/icon-photoshop.png" art="Photoshop" class="img-fluid">
           </div>
           <div class="skill-html">
             <h2>Adobe Photoshop</h2>
@@ -70,13 +70,13 @@
         </div>
         <div class="skill-box">
           <div class="skill-img">
-            <img src="../assets/icon-xd.png" art="XD" class="img-350">
+            <img src="../assets/icon-xd.png" art="XD" class="img-fluid">
           </div>
           <div class="skill-html">
             <h2>Adobe XD</h2>
             <p>
-              コーディングをする前にデザインチェックのために
-              ワイヤーフレームを作成します。
+              HTML/CSSでコーディングをする前にWebサイトのデザインと
+              プロトタイプ(ワイヤーフレーム)の作成をします。
             </p>
           </div>
         </div>
@@ -203,6 +203,47 @@
 }
 .a{
   opacity: 0;
+}
+
+@media screen and (max-width: 768px){
+  .title h1{
+    font-size: 150px;
+    text-shadow: 20px 20px 25px #fff;
+  }
+  .skills-title p{
+    font-size: 1.2rem;
+    padding: 1rem 0.5rem;
+    margin: 0;
+  }
+  .title2-box h1{
+    margin: 3rem 0;
+    font-size: 100px;
+  }
+}
+@media screen and (max-width: 500px){
+  .skill-img{
+    padding: 3rem;
+  }
+  .skill-box{
+    flex-direction: column;
+    margin: 3rem 0;
+  }
+  .skill-html{
+    padding: 0.5rem 1rem;
+    text-align: left;
+  }
+  .skill-html p{
+    padding: 0 5px;
+  }
+  .title2-box{
+    margin: 5rem 0.5rem;
+  }
+  .title2-box h1{
+    font-size: 50px;
+  }
+  .title h1{
+    font-size: 70px;
+  }
 }
 
 </style>

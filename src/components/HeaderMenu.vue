@@ -223,8 +223,7 @@ export default {
         {title: 'Home', path: '/'},
         {title: 'Skills', path: '/skills'},
         {title: 'Works', path: '/works'},
-        {title: 'Profile', path: '/profile'},
-        {title: 'Contact', path: '/contact'}
+        {title: 'Profile', path: '/profile'}
       ],
       ActiveBtn: false
     }

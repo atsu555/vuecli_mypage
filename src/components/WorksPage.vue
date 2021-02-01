@@ -68,7 +68,7 @@
         </div>
       </div>
       <div class="landing-box">
-        <div>
+        <div class="lp-img">
           <div v-if="show1" class="landing-img">
             <img src="../assets/schoolLP.jpg" alt="デザインスクール" class="img-fluid">
           </div>
@@ -96,26 +96,6 @@
     </div>
 
 
-    <swiper
-      ref="mySwiper"
-      :options="swiperOption"
-      class="slide">
-      <swiper-slide>
-        <a href="">
-          <img src="../assets/schoolLP.jpg" alt="デザインスクール" class="img-500">
-          <h2>WebデザインスクールLP</h2>
-        </a>
-      </swiper-slide>
-      <swiper-slide>
-        <a href="">
-          <img src="../assets/dental.jpg" alt="歯科LP" class="img-500">
-          <h2>歯科矯正LP</h2>
-        </a>
-      </swiper-slide>
-      <!-- <div class="swiper-pagination" slot="pagination"></div> -->
-      <div slot="button-prev" class="swiper-button-prev"></div>
-      <div slot="button-next" class="swiper-button-next"></div>
-    </swiper>
   </div>
 </template>
 
@@ -228,19 +208,7 @@
 
 
 
-.slide{
-  margin: 10rem 0;
-}
-.slide a:hover{
-  text-decoration: none;
-  opacity: 0.8;
-}
-.slide h2{
-  padding: 1rem 0 0;
-}
-.swiper-button-prev, .swiper-button-next{
-  color: #fff;
-}
+
 /* アニメーション */
 .fade-in{
   font-size:40px;
@@ -323,6 +291,83 @@
   opacity: 0;
 }
 
+@media screen and (max-width: 768px){
+  .title h1{
+    font-size: 100px;
+    text-shadow: 15px 15px 20px #fff;
+  }
+  .description{
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .description h2{
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+  .description p{
+    font-size: 0.6rem;
+  }
+  .use-skill ul{
+    margin: 0;
+  }
+  .use-skill li{
+    padding: 1.5px;
+    font-size: 0.5rem;
+    width: 60px;
+    height: 20px;
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+  .thumbnails img{
+    object-fit: cover;
+    width: 180px;
+    height: 100px;
+  }
+}
+@media screen and (max-width: 500px){
+  .title h1{
+    font-size: 45px;
+  }
+  .landing-contents{
+    margin: 1.5rem 0;
+    flex-direction: column;
+    width: 100%;
+    order: 1;
+  }
+  .description{
+    order: 2;
+    margin-top: -4rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .landing-box{
+    display: flex;
+    flex-direction: column;
+  }
+  .lp-img{
+    order: 1;
+  }
+  .thumbnails{
+    order: 2;
+  }
+  .thumbnails img{
+    object-fit: cover;
+    width: 200px;
+    height: 55px;
+    opacity: 0.9;
+  }
+  .thumbnails li{
+    margin: 0 0.3rem;
+    position: relative;
+    top: -57px;
+  }
+  .thumbnails li:last-child{
+    margin-right: 0.3rem;
+  }
+  .use-skill ul{
+    display: flex;
+  };
+}
 </style>
 
 <script>
@@ -334,26 +379,7 @@ export default {
       show2: false,
       show3: false,
       isVisibletitle: false,
-      isVisiblelp: false,
-      swiperOption: {
-        speed: 2000,//スライドの切り替わりスピード
-        spaceBetween: 30,//各スライドの余白
-        centeredSlides: true,//スライダーを真ん中に
-        loop: true, //無限ループ
-        slidesPerView: 1,
-        autoplay: { //スライドの自動切り替え
-          delay: 1000,//スライドの自動切り替えの秒数
-          disableOnInteraction: false//何らかのアクション後の自動切り替えを再開
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
-      }
-      // pagination: {
-      //   el: '.swiper-pagination',
-      //   clickable: true
-      // },
-      }
+      isVisiblelp: false
     }
   },
   methods: {
