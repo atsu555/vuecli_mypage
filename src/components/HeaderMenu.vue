@@ -1,24 +1,5 @@
 <template>
     <header>
-        <div class="header-box">
-          <div class="header-border">
-            <div class="header-title">
-                <h1>Portfolio</h1>
-            </div>
-            <div class="header-menu">
-                <ul>
-                    <li v-for="(item, index) in items" :key=index class="hmargin-right">
-                        <router-link v-bind:to=item.path>
-                             {{ item.title }}
-                        </router-link>
-                     </li>
-                </ul>
-            </div>
-          </div>
-        </div>
-        <div class="git-hub">
-          <a href="https://github.com/atsu555"><img src="../assets/github-brands.png" art="githubアイコン" class="img-fluid"></a>
-        </div>
         <!-- hamburger_btn -->
             <div>
                 <div class="hamburger_btn" v-on:click='ActiveBtn=!ActiveBtn'>
@@ -33,7 +14,7 @@
                           <!-- <li><a href="skills.html">スキル</a></li>
                           <li><a href="works.html">制作物</a></li>
                           <li><a href="profile.html">プロフィール</a></li> -->
-                          <li v-for="(item, index) in items" :key=index>
+                          <li v-for="(item, index) in items" :key=index v-on:click='ActiveBtn=!ActiveBtn'>
                               <router-link v-bind:to=item.path>
                                   {{ item.title }}
                               </router-link>
@@ -47,13 +28,6 @@
 
 <style scoped>
 /* header */
-header{
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  width: 100%;
-  background-color: rgba(0,0,0, 0.9);
-}
 header h1, header a{
   color: #fff;
 }
@@ -69,36 +43,19 @@ header h1{
   padding: 3rem 8rem 0;
   width: 100%;
 }
-.header-border{
-  display: flex;
-  justify-content: space-between;
-  border-bottom: solid 1px #fff;
-  padding-bottom: 5px;
-}
 .header-menu ul{
   list-style: none;
   display: flex;
   margin: 0;
   padding-top: 1.5rem;
 }
-.hmargin-right{
-  margin-right: 2rem;
-}
-.hmargin-right:last-child{
-  margin-right: 0;
-}
-.git-hub{
-  position: fixed;
-  right: 12rem;
-  top: 1.6rem;
-  width: 30px;
-}
+
 
 /* hamburgerbutton */
 .hamburger_btn {
   position: fixed;
-  top: 1.8rem;
-  right: 8rem;
+  top: 1.6rem;
+  left: 2rem;
   cursor: pointer;
   z-index: 50;
   width: 32px;
@@ -164,7 +121,7 @@ header h1{
   padding: 2rem 1rem;
   position: fixed;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   top: 0;
   right: 0;
 }
@@ -221,9 +178,10 @@ export default {
     return {
       items: [
         {title: 'Home', path: '/'},
+        {title: 'Profile', path: '/profile'},
+        {title: 'Service', path: '/service'},
         {title: 'Skills', path: '/skills'},
-        {title: 'Works', path: '/works'},
-        {title: 'Profile', path: '/profile'}
+        {title: 'Works', path: '/works'}
       ],
       ActiveBtn: false
     }

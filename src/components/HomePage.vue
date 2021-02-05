@@ -1,7 +1,8 @@
 <template>
   <div class="top-page">
     <div class="main-img">
-      <img src="../assets/mybike-img.png" alt="バイク" class="img-fluid">
+      <img src="../assets/topimg.jpg" alt="バイク" class="pc img-fluid">
+      <img src="../assets/topimg-ipad.jpg" alt="バイク" class="sp img-fluid">
     </div>
     <!-- profile -->
     <div id="profile">
@@ -11,7 +12,13 @@
         v-bind:class="[isVisible01 === true ? 'fade3' : 'a']"
         class="title"
         >
-          <h1>Profile</h1>
+        <div class="read-more">
+          <h1>
+                  <router-link to="/profile">
+                      Profile
+                  </router-link>
+          </h1>
+        </div>
         </div>
         <div class="profile-data">
           <div
@@ -35,13 +42,6 @@
                 間になりたいと思い、プログラミング学習を始める。<br>
                 本気でWeb業界で仕事をするために、2020年12月に航空自衛隊を退職。
               </p>
-              <div>
-                <div class="read-more">
-                  <router-link to="/profile">
-                      read more
-                  </router-link>
-                </div>
-              </div>
             </div>
             <div
             v-observe-visibility="visibilityChangedme"
@@ -53,6 +53,88 @@
         </div>
       </div>
     </div>
+
+    <!-- service -->
+    <div id="service">
+      <div class="container">
+        <div
+        v-observe-visibility="visibilityChanged05"
+        v-bind:class="[isVisible05 === true ? 'fade3' : 'a']"
+        class="title">
+        <div class="read-more">
+          <h1>
+                  <router-link to="/service">
+                      Service
+                  </router-link>
+          </h1>
+        </div>
+        </div>
+        <div class="service-area">
+
+          <div
+          v-observe-visibility="visibilityChangedco"
+          v-bind:class="[isVisibleco === true ? 'fade1' : 'a']"
+          class="service-item">
+            <div class="service-image">
+              <img src="../assets/desktop.jpg" alt="coding" class="img-250"/>
+            </div>
+            <div class="sub-title">
+              <h2>コーディング</h2>
+            </div>
+
+            <div class="service-content">
+              LPやコーポレートサイト、ブログなど、
+              目的に応じた適切なコーディングを行います(レスポンシブ対応可)。また、軽微なコードの修正などにも対応しています。<br><br>
+              【料金目安】<br>
+              コード修正: ¥10,000~/1p<br>
+              LP制作: ¥20,000~/1p
+            </div>
+          </div>
+
+          <div
+          v-observe-visibility="visibilityChangedde"
+          v-bind:class="[isVisiblede === true ? 'fade4' : 'a']"
+          class="service-item">
+            <div class="service-image">
+              <img src="../assets//pencil.jpg" alt="web design" class="img-250"/>
+            </div>
+            <div class="sub-title">
+              <h2>Webデザイン</h2>
+            </div>
+            <div class="service-content">
+              ヒアリングにより、ご要望に沿ったデザインを的確に把握し作成致します。
+              ユーザーインターフェースを重要視した設計を行い、ご期待を超える提案を提供します。<br><br>
+              【料金目安】<br>
+              LP制作: ¥30,000~/1p<br>
+              コーポレートサイト (10p以下): ¥80,000~
+            </div>
+          </div>
+
+          <div
+          v-observe-visibility="visibilityChangedword"
+          v-bind:class="[isVisibleword === true ? 'fade2' : 'a']"
+          class="service-item">
+            <div class="service-image">
+              <img src="../assets//wordpress2.jpg" alt="wordpress" class="img-250"/>
+            </div>
+            <div class="sub-title">
+              <h2>Wordpress</h2>
+            </div>
+            <div class="service-content">
+              コーポレートサイトや個人ブログ、およびウェブマガジンなどのWordPressサイトの構築や既存サイトのWordPress移行、コードの修正に対応しております。
+              <br><br>
+              【料金目安】<br>
+              Wordpress移行: ¥100,000~<br>
+              Wordpress制作: ¥200,000~
+            </div>
+          </div>
+        </div>
+
+          <p>※正式なお見積もりは、別途ご相談させていただきます。</p>
+
+      </div>
+    </div>
+
     <!-- skills -->
     <div id="skills">
       <div class="container skills-box">
@@ -60,7 +142,13 @@
         v-observe-visibility="visibilityChanged02"
         v-bind:class="[isVisible02 === true ? 'fade3' : 'a']"
         class="title">
-            <h1>Skills</h1>
+          <div class="read-more">
+            <h1>
+                    <router-link to="/skills">
+                        Skills
+                    </router-link>
+            </h1>
+          </div>
         </div>
         <div class="skills-area">
           <div
@@ -72,10 +160,6 @@
             </div>
             <div class="text-box">
               <h2>HTML5/CSS3</h2>
-              <p>
-                レスポンシブサイトのコーディング。正しい文法で、UXが高く、
-                コードがDRYで保守が容易な、SEOにも配慮したサイトをつくるべく日々勉強中です。
-              </p>
             </div>
           </div>
           <div
@@ -87,10 +171,6 @@
             </div>
             <div class="text-box">
               <h2>JavaScript</h2>
-              <p>
-                Class属性を操作してサイトに動きを付けたり、
-                プラグインを使ってスライドショーや可変グリッドレイアウトを実装したり。
-              </p>
             </div>
           </div>
           <div
@@ -102,10 +182,6 @@
             </div>
             <div class="text-box">
               <h2>Adobe Photoshop</h2>
-              <p>
-                Photoshopを使用したデザインカンプの作成。
-                また、バナーやアイコンなど、サイトのパーツも作成します。
-              </p>
             </div>
           </div>
           <div
@@ -117,9 +193,6 @@
             </div>
             <div class="text-box">
               <h2>Adobe XD</h2>
-              <p>
-                adobeXDを使用したワイヤーフレームの作成。
-              </p>
             </div>
           </div>
         </div>
@@ -132,7 +205,13 @@
         v-observe-visibility="visibilityChanged03"
         v-bind:class="[isVisible03 === true ? 'fade3' : 'a']"
         class="title">
-            <h1>Works</h1>
+          <div class="read-more">
+            <h1>
+                    <router-link to="/works">
+                        Works
+                    </router-link>
+            </h1>
+          </div>
         </div>
         <swiper
           ref="mySwiper"
@@ -170,9 +249,18 @@
         v-observe-visibility="visibilityChanged04"
         v-bind:class="[isVisible04 === true ? 'fade3' : 'a']"
         class="title">
-          <h1>Contact</h1>
+          <div class="read-more">
+            <h1>
+                    <router-link to="/contact">
+                        Contact
+                    </router-link>
+            </h1>
+          </div>
         </div>
         <div class="contact-box">
+          <a href="mailto:f555.wakaki@gmail.com?body=%E3%81%94%E4%BE%9D%E9%A0%BC/%E3%81%94%E7%9B%B8%E8%AB%87%E5%86%85%E5%AE%B9" class="gmail"><img src="../assets/Icon feather-mail.png" alt="mail" class="img-fluid"></a>
+        </div>
+        <!-- <div class="contact-box">
           <form action="" method="post">
             <p>
               <input type="text" name="name" size="40" placeholder="NAME" class="name">
@@ -184,16 +272,21 @@
               <input type="submit" value="SEND" class="send">
             </p>
           </form>
-        </div>
+        </div> -->
       </div>
     </div>
   </div> <!-- toppage-->
 </template>
 
 <style scoped>
+.img-250{
+  width: 250px;
+  height: 250px;
+}
 /* main */
 .top-page{
   z-index: 50;
+  background: black;
 }
 
 .title h1{
@@ -202,8 +295,36 @@
   text-shadow: 25px 25px 30px #fff;
 }
 
+
 .main-img img{
+  height: 100vh;
   object-fit: cover;
+}
+/* パソコンで見たときは"pc"のclassがついた画像が表示される */
+.pc { display: block !important; }
+.sp { display: none !important; }
+
+/* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
+@media only screen and (max-width: 768px) {
+    .pc { display: none !important; }
+    .sp { display: block !important; }
+}
+/* タイトルアンダーライン */
+.read-more a{
+  color: #fff;
+  text-decoration: none;
+  padding-bottom: 1rem;
+}
+.read-more a:after{
+  content: '';
+	width: 0;
+	transition: all 0.5s ease;
+	border-bottom: 3px solid #fff;
+  display: block;
+}
+.read-more a:hover:after {
+	width: 50%;
+	border-bottom: 3px solid #fff;
 }
 
 /* profile */
@@ -211,7 +332,7 @@
   padding: 10rem 0;
 }
 #profile h1{
-  text-align: right;
+  text-align: left;
   padding-bottom: 5rem;
 }
 #profile h2{
@@ -228,19 +349,47 @@
 .profile-text{
   padding: 1rem;
 }
-.read-more{
+
+/* service */
+#service{
+  padding: 10rem 0;
+}
+#service p{
+  font-size:18px;
+  text-align:center;
+  margin: 2rem 0;
+}
+.service-area{
+  display: flex;
+  margin-top: 5rem;
+}
+.sub-title{
+  padding: 1rem 0;
+}
+.service-item{
+  background-color: rgba(255,255,255,0.7);
+  margin-right: 1rem;
+  border-radius: 30px;
+  padding: 1rem;
+  color: black;
+}
+.service-item:last-child{
+  margin: 0;
+}
+.service-image{
   text-align: center;
 }
-.read-more a{
-  background-color: #000;
-  border: white 1px solid;
-  color: #fff;
-  padding: 0.8rem 0.8rem;
-  text-decoration: none;
+.service-image img{
+  border-radius: 50%;
 }
-.read-more a:hover{
-  background-color: rgba(255,255,255,0.4);
+
+#service .read-more a:hover:after {
+	width: 60%;
+	border-bottom: 3px solid #fff;
 }
+
+
+
 
 /* skills */
 #skills{
@@ -273,6 +422,10 @@
 .js-box, .ps-box, .xd-box{
   margin-top: -15rem;
 }
+#skills .read-more a:hover:after {
+	width: 40%;
+	border-bottom: 3px solid #fff;
+}
 
 /* works */
 #works{
@@ -297,9 +450,6 @@
   font-size: 2rem;
   font-weight: 300;
 }
-.more-works a:hover{
-  background-color: rgba(255,255,255,0.4);
-}
 .slide{
   margin: 10rem 0;
 }
@@ -310,6 +460,9 @@
 .slide a:hover{
   text-decoration: none;
   opacity: 0.8;
+}
+.slide a:hover .caption{
+  visibility: visible;
 }
 .slide img{
   padding: 3rem 5rem;
@@ -323,10 +476,11 @@
 }
 
 
+
+
 /* contact */
 #contact{
   background-color: black;
-  text-align: center;
 }
 #contact h1{
   padding: 2rem 0;
@@ -370,6 +524,13 @@
   color: #fff;
   border: solid 1px #fff;
   border-radius: 20px;
+}
+.mail-color{
+  color: white;
+}
+#contact .read-more a:hover:after {
+	width: 60%;
+	border-bottom: 3px solid #fff;
 }
 
 
@@ -451,11 +612,33 @@
     transform: translateY(0);
   }
 }
+.fade4{
+  opacity: 0;
+  animation-name: title-fade1;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes title-fade1{
+  0%{
+    opacity: 0;
+    transform: translateY(0px)
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .a{
   opacity: 0;
 }
 
 @media screen and (max-width: 1200px){
+  .main-img img{
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+  }
   #profile h2{
     font-size: 80px;
   }
@@ -490,9 +673,6 @@
     font-size: 150px;
     text-shadow: 20px 20px 25px #fff;
   }
-  .main-img img{
-    margin-top: 2rem;
-  }
   /* profile */
   #profile h2{
     font-size: 70px;
@@ -508,14 +688,15 @@
   .profile-text{
     padding: 0.5rem;
   }
-  .read-more a{
-  padding: 0.6rem 0.6rem;
-  text-decoration: none;
-  font-size: 0.8rem;
-}
-.read-more a:hover{
-  background-color: rgba(255,255,255,0.4);
-}
+  /* service */
+  .service-area{
+    flex-direction: column;
+    margin-top: 5rem;
+    text-align: center;
+  }
+  .service-item{
+    margin: 1rem 0;
+  }
   /* contact */
   .name{
     width: 500px;
@@ -538,7 +719,7 @@
   }
 }
 @media screen and (max-width: 500px){
-  #profile, #skills, #works{
+  #profile, #skills, #works, #service{
     padding: 5rem 0;
   }
   .title h1{
@@ -561,6 +742,19 @@
   }
   .profile-text{
     padding: 1rem;
+  }
+  /* service */
+  #service h2{
+    font-size: 1.5rem;
+  }
+  #service p{
+    font-size: 10px;
+  }
+  .service-content{
+    font-size: 0.8rem;
+  }
+  .service-item{
+    padding: 0.5rem;
   }
   /* skills */
   .skills-data{
@@ -636,6 +830,10 @@ export default {
         isVisible02: false,
         isVisible03: false,
         isVisible04: false,
+        isVisible05: false,
+        isVisibleco: false,
+        isVisiblede: false,
+        isVisibleword: false,
         isVisiblemyname: false,
         isVisibletext: false,
         isVisibleme: false,
@@ -676,6 +874,18 @@ export default {
       },
       visibilityChanged04 (isVisible04, entry) {
         this.isVisible04 = isVisible04
+      },
+      visibilityChanged05 (isVisible05, entry) {
+        this.isVisible05 = isVisible05
+      },
+      visibilityChangedco (isVisibleco, entry) {
+        this.isVisibleco = isVisibleco
+      },
+      visibilityChangedde (isVisiblede, entry) {
+        this.isVisiblede = isVisiblede
+      },
+      visibilityChangedword (isVisibleword, entry) {
+        this.isVisibleword = isVisibleword
       },
       visibilityChangedmyname (isVisiblemyname, entry) {
         this.isVisiblemyname = isVisiblemyname

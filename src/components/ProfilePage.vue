@@ -44,7 +44,8 @@
 }
 /* Profilepage */
 .About h1{
-  margin: 5rem 0 5rem 5rem;
+  margin: 0 0 5rem 5rem;
+  padding-top: 5rem;
 }
 .about-img{
   flex: 3;

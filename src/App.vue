@@ -24,9 +24,9 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap');
 .contents{
-  background-color: black;
   color: #fff;
-  padding: 10rem 0;
+  background: black;
+  padding-bottom: 10rem;
 }
 .contents a{
   text-decoration: none;
@@ -43,9 +43,7 @@ export default {
 .img-350{
   width: 350px;
 }
-@media screen and (max-width: 500px){
-  .contents{
-    padding: 1rem 0;
-  }
+.img250{
+  width: 250px;
 }
 </style>
