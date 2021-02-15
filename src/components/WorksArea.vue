@@ -1,62 +1,53 @@
 <template>
-  <div class="top-page">
-    <div class="main-img">
-      <img src="../assets/topimg.jpg" alt="バイク" class="pc img-fluid">
-      <img src="../assets/topimg-ipad.jpg" alt="バイク" class="sp img-fluid">
+  <div id="works">
+    <div class="container works-box">
+      <div
+      v-observe-visibility="visibilityChanged03"
+      v-bind:class="[isVisible03 === true ? 'fade3' : 'a']"
+      class="title">
+        <div class="read-more">
+          <h1>
+                  <router-link to="/works">
+                      Works
+                  </router-link>
+          </h1>
+        </div>
+      </div>
+      <swiper
+        ref="mySwiper"
+        :options="swiperOption"
+        class="slide"
+      >
+        <swiper-slide>
+          <a href="">
+            <img src="../assets/schoolLP.jpg" alt="デザインスクール" class="img-fluid">
+            <h2>WebデザインスクールLP</h2>
+          </a>
+        </swiper-slide>
+        <swiper-slide>
+          <a href="">
+            <img src="../assets/dental.jpg" alt="歯科LP" class="img-fluid">
+            <h2>歯科矯正LP</h2>
+          </a>
+        </swiper-slide>
+        <swiper-slide>
+          <a href="">
+            <img src="../assets/img1.jpg" alt="バイク" class="img-fluid">
+            <h2>バイク</h2>
+          </a>
+        </swiper-slide>
+        <!-- <div class="swiper-pagination" slot="pagination"></div> -->
+        <div slot="button-prev" class="swiper-button-prev"></div>
+        <div slot="button-next" class="swiper-button-next"></div>
+      </swiper>
     </div>
-
-    <!-- プロフィール -->
-    <profile-area></profile-area>
-
-    <!-- サービス -->
-    <service-area></service-area>
-
-    <!-- スキル -->
-    <skills-area></skills-area>
-
-    <!-- works -->
-    <works-area></works-area>
-
-    <!-- contact -->
-    <contact-area></contact-area>
-
-    <!--コピーライト-->
-    <div id="copyright">
-      Copyright &copy; 2021 Atsutaka Kikkawa's Protfolio All Rights Reserved.
-    </div>
-  </div> <!-- toppage-->
+  </div>
 </template>
 
 <style scoped>
 .img-250{
   width: 250px;
   height: 250px;
-}
-/* main */
-.top-page{
-  z-index: 50;
-  background: black;
-}
-
-.title h1{
-  font-size: 180px;
-  font-weight: 700;
-  text-shadow: 25px 25px 30px #fff;
-}
-
-
-.main-img img{
-  height: 100vh;
-  object-fit: cover;
-}
-/* パソコンで見たときは"pc"のclassがついた画像が表示される */
-.pc { display: block !important; }
-.sp { display: none !important; }
-
-/* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
-@media only screen and (max-width: 768px) {
-    .pc { display: none !important; }
-    .sp { display: block !important; }
 }
 /* タイトルアンダーライン */
 .read-more a{
@@ -75,11 +66,59 @@
 	width: 50%;
 	border-bottom: 3px solid #fff;
 }
-/* コピーライト */
-#copyright{
-  text-align: center;
-  padding-bottom: 1.5rem;
+.title h1{
+  font-size: 180px;
+  font-weight: 700;
+  text-shadow: 25px 25px 30px #fff;
 }
+/* works */
+#works{
+  padding: 10rem 0;
+}
+.works-items{
+  padding: 5rem 0;
+  margin: 0 auto;
+}
+.works-item1{
+  margin-bottom: 3rem;
+}
+.more-works{
+  text-align: center;
+}
+.more-works a{
+  background-color: #000;
+  border: white 1px solid;
+  color: #fff;
+  padding: 1rem 3rem;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 300;
+}
+.slide{
+  margin: 10rem 0;
+}
+.slide a{
+  color: #fff;
+  text-align: center;
+}
+.slide a:hover{
+  text-decoration: none;
+  opacity: 0.8;
+}
+.slide a:hover .caption{
+  visibility: visible;
+}
+.slide img{
+  padding: 3rem 5rem;
+}
+.slide h2{
+  padding: 0;
+}
+
+.swiper-button-prev, .swiper-button-next{
+  color: #fff;
+}
+
 
 /* アニメーション */
 .fade-in{
@@ -179,7 +218,6 @@
 .a{
   opacity: 0;
 }
-
 @media screen and (max-width: 1200px){
   .main-img img{
     height: auto;
@@ -290,116 +328,15 @@
   .profile-text{
     padding: 1rem;
   }
-  /* service */
-  #service h2{
-    font-size: 1.5rem;
-  }
-  #service p{
-    font-size: 10px;
-  }
-  .service-content{
-    font-size: 0.8rem;
-  }
-  .service-item{
-    padding: 0.5rem;
-  }
-  /* skills */
-  .skills-data{
-    width: 300px;
-    text-align: center;
-    padding: 1.5rem;
-  }
-  .text-box h2{
-    padding: 0.8rem 0;
-    font-size: 25px;
-  }
-  .text-box p{
-    font-size: 13px;
-    line-height: 1.7;
-  }
-  .img-box{
-    padding: 2rem;
-  }
-  .html-box, .ps-box, .js-box, .xd-box{
-    margin: 4rem auto;
-  }
-  .js-box, .ps-box, .xd-box{
-    margin-top: 0;
-  }
-  /* works */
-
-  /* contact */
-  .name{
-    width: 280px;
-    height: 50px;
-    font-size: 1.2rem;
-    padding-left: 1rem;
-  }
-  .message{
-    width: 280px;
-    height: 300px;
-    font-size: 1.2rem;
-    padding: 0.5rem 0 0 1rem;
-  }
-  /* works */
-  #works h2{
-    font-size: 25px;
-  }
-  .works-item1{
-    width: 290px;
-  }
-  .works-item2{
-    width: 290px;
-  }
-  .works-items{
-    padding: 3rem 0;
-  }
-  .slide{
-    margin: 5rem 0;
-  }
-  .slide h2{
-    font-size: 15px;
-  }
-  .slide img{
-    padding: 0.5rem 3.5rem;
-  }
-
 }
-
 </style>
 
 <script>
-import ProfileArea from '@/components/ProfileArea'
-import ServiceArea from '@/components/ServiceArea'
-import SkillsArea from '@/components/SkillsArea'
-import WorksArea from '@/components/WorksArea'
-import ContactArea from '@/components/ContactArea'
 export default {
-  components: {
-    ProfileArea,
-    ServiceArea,
-    SkillsArea,
-    WorksArea,
-    ContactArea
-  },
-  name: 'HomePage',
+  name: 'WorksArea',
   data (){
     return {
-        isVisible01: false,
-        isVisible02: false,
         isVisible03: false,
-        isVisible04: false,
-        isVisible05: false,
-        isVisibleco: false,
-        isVisiblede: false,
-        isVisibleword: false,
-        isVisiblemyname: false,
-        isVisibletext: false,
-        isVisibleme: false,
-        isVisiblehtml: false,
-        isVisiblejs: false,
-        isVisibleps: false,
-        isVisiblexd: false,
         swiperOption: {
         speed: 2000,//スライドの切り替わりスピード
         spaceBetween: 30,//各スライドの余白
@@ -422,51 +359,9 @@ export default {
     }
   },
   methods: {
-      visibilityChanged01 (isVisible01, entry) {
-        this.isVisible01 = isVisible01
-      },
-      visibilityChanged02 (isVisible02, entry) {
-        this.isVisible02 = isVisible02
-      },
       visibilityChanged03 (isVisible03, entry) {
         this.isVisible03 = isVisible03
-      },
-      visibilityChanged04 (isVisible04, entry) {
-        this.isVisible04 = isVisible04
-      },
-      visibilityChanged05 (isVisible05, entry) {
-        this.isVisible05 = isVisible05
-      },
-      visibilityChangedco (isVisibleco, entry) {
-        this.isVisibleco = isVisibleco
-      },
-      visibilityChangedde (isVisiblede, entry) {
-        this.isVisiblede = isVisiblede
-      },
-      visibilityChangedword (isVisibleword, entry) {
-        this.isVisibleword = isVisibleword
-      },
-      visibilityChangedmyname (isVisiblemyname, entry) {
-        this.isVisiblemyname = isVisiblemyname
-      },
-      visibilityChangedtext (isVisibletext, entry) {
-        this.isVisibletext = isVisibletext
-      },
-      visibilityChangedme (isVisibleme, entry) {
-        this.isVisibleme = isVisibleme
-      },
-      visibilityChangedhtml (isVisiblehtml, entry) {
-        this.isVisiblehtml = isVisiblehtml
-      },
-      visibilityChangedjs (isVisiblejs, entry) {
-        this.isVisiblejs = isVisiblejs
-      },
-      visibilityChangedps (isVisibleps, entry) {
-        this.isVisibleps = isVisibleps
-      },
-      visibilityChangedxd (isVisiblexd, entry) {
-        this.isVisiblexd = isVisiblexd
       }
   }
-}
+  }
 </script>

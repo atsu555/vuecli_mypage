@@ -26,7 +26,6 @@ export default {
 .contents{
   color: #fff;
   background: black;
-  padding-bottom: 10rem;
 }
 .contents a{
   text-decoration: none;
