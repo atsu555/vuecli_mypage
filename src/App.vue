@@ -5,6 +5,10 @@
         <header-menu></header-menu>
       </div>
      <router-view/>
+      <!--コピーライト-->
+      <div id="copyright">
+        Copyright &copy; 2021 Atsutaka Kikkawa's Protfolio All Rights Reserved.
+      </div>
     </div>
   </div>
 </template>
@@ -44,5 +48,10 @@ export default {
 }
 .img250{
   width: 250px;
+}
+/* コピーライト */
+#copyright{
+  text-align: center;
+  padding-bottom: 1.5rem;
 }
 </style>

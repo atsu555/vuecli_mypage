@@ -7,9 +7,7 @@
         class="title">
           <div class="read-more">
             <h1>
-                    <router-link to="/skills">
-                        Skills
-                    </router-link>
+              Skills
             </h1>
           </div>
         </div>
@@ -69,20 +67,15 @@
   height: 250px;
 }
 /* タイトルアンダーライン */
-.read-more a{
-  color: #fff;
-  text-decoration: none;
-  padding-bottom: 1rem;
-}
-.read-more a:after{
+.read-more :after{
   content: '';
 	width: 0;
 	transition: all 0.5s ease;
 	border-bottom: 3px solid #fff;
   display: block;
 }
-.read-more a:hover:after {
-	width: 50%;
+.read-more :hover:after {
+	width: 100%;
 	border-bottom: 3px solid #fff;
 }
 .title h1{
@@ -96,6 +89,7 @@
 }
 #skills h1{
   padding-bottom: 2rem;
+  display: inline-block;
 }
 .skills-data{
   border: solid 1px #fff;
@@ -318,21 +312,11 @@
     text-shadow: 18px 18px 20px #fff;
   }
 
-  /* profile */
-  #profile h2{
-    font-size: 60px;
-    padding: 0.5rem;
-  }
-  #profile h3{
-    font-size: 25px;
-  }
-  #profile p{
-    font-size: 13px;
-    line-height: 1.6;
-    padding: 0.5rem;
-  }
-  .profile-text{
-    padding: 1rem;
+  .skills-data{
+    margin: 4rem auto;
+    width: 300px;
+    text-align: center;
+    padding: 1.5rem;
   }
 }
 </style>

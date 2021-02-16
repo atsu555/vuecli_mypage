@@ -7,9 +7,7 @@
       class="title">
         <div class="read-more">
           <h1>
-                  <router-link to="/works">
-                      Works
-                  </router-link>
+             Works
           </h1>
         </div>
       </div>
@@ -50,20 +48,15 @@
   height: 250px;
 }
 /* タイトルアンダーライン */
-.read-more a{
-  color: #fff;
-  text-decoration: none;
-  padding-bottom: 1rem;
-}
-.read-more a:after{
+.read-more :after{
   content: '';
 	width: 0;
 	transition: all 0.5s ease;
 	border-bottom: 3px solid #fff;
   display: block;
 }
-.read-more a:hover:after {
-	width: 50%;
+.read-more :hover:after {
+	width: 100%;
 	border-bottom: 3px solid #fff;
 }
 .title h1{
@@ -74,6 +67,9 @@
 /* works */
 #works{
   padding: 10rem 0;
+}
+#works h1{
+  display: inline-block;
 }
 .works-items{
   padding: 5rem 0;

@@ -5,20 +5,19 @@
           v-bind:class="[isVisibletitle === true ? 'fade3' : 'a']"
           class="title"
     >
+          <div class="read-more">
             <h1>
-              LandingPage
+              Works
             </h1>
+          </div>
     </div>
 
     <div class="landing-contents">
       <div class="description">
         <div v-if="show1">
-          <h2>スクールLP</h2>
+          <h2>合同会社Day Produce様　HP(実務)</h2>
           <p>
-            説明が入ります。説明が入ります。説明が入ります。説明が入ります。
-            説明が入ります。説明が入ります。説明が入ります。説明が入ります。
-            説明が入ります。説明が入ります。説明が入ります。説明が入ります。
-            説明が入ります。説明が入ります。説明が入ります。
+            担当したところはコーディングとデザインです。
           </p>
           <div class="use-skill">
             <h2>使用スキル</h2>
@@ -100,6 +99,17 @@
 </template>
 
 <style scoped>
+.read-more :after{
+  content: '';
+	width: 0;
+	transition: all 0.5s ease;
+	border-bottom: 3px solid #fff;
+  display: block;
+}
+.read-more :hover:after {
+	width: 40%;
+	border-bottom: 3px solid #fff;
+}
 .top-page{
   z-index: 50;
 }
@@ -120,7 +130,7 @@
 /* workspage */
 .works-contents{
   text-align: center;
-  padding-top: 5rem;
+  padding: 5rem 0;
 }
 .works-contents h1{
   text-align: left;

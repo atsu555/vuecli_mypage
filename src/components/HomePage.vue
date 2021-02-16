@@ -1,8 +1,7 @@
 <template>
   <div class="top-page">
     <div class="main-img">
-      <img src="../assets/topimg.jpg" alt="バイク" class="pc img-fluid">
-      <img src="../assets/topimg-ipad.jpg" alt="バイク" class="sp img-fluid">
+      <img src="../assets/topimg.jpg" alt="バイク" class="img-fluid">
     </div>
 
     <!-- プロフィール -->
@@ -19,11 +18,6 @@
 
     <!-- contact -->
     <contact-area></contact-area>
-
-    <!--コピーライト-->
-    <div id="copyright">
-      Copyright &copy; 2021 Atsutaka Kikkawa's Protfolio All Rights Reserved.
-    </div>
   </div> <!-- toppage-->
 </template>
 
@@ -34,7 +28,6 @@
 }
 /* main */
 .top-page{
-  z-index: 50;
   background: black;
 }
 
@@ -49,15 +42,7 @@
   height: 100vh;
   object-fit: cover;
 }
-/* パソコンで見たときは"pc"のclassがついた画像が表示される */
-.pc { display: block !important; }
-.sp { display: none !important; }
 
-/* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
-@media only screen and (max-width: 768px) {
-    .pc { display: none !important; }
-    .sp { display: block !important; }
-}
 /* タイトルアンダーライン */
 .read-more a{
   color: #fff;
@@ -75,11 +60,7 @@
 	width: 50%;
 	border-bottom: 3px solid #fff;
 }
-/* コピーライト */
-#copyright{
-  text-align: center;
-  padding-bottom: 1.5rem;
-}
+
 
 /* アニメーション */
 .fade-in{

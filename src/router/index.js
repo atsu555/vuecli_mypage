@@ -2,10 +2,10 @@ import Vue from 'vue'
 import BootstrapVue from 'bootstrap-vue'
 import Router from 'vue-router'
 import HomePage from '@/components/HomePage'
-import SkillsPage from '@/components/SkillsPage'
+// import SkillsPage from '@/components/SkillsPage'
 import WorksPage from '@/components/WorksPage'
 import ProfilePage from '@/components/ProfilePage'
-import ContactPage from '@/components/ContactPage'
+// import ContactPage from '@/components/ContactPage'
 
 
 
@@ -24,11 +24,11 @@ export default new Router({
       name: 'HomePage',
       component: HomePage
     },
-    {
-      path: '/skills',
-      name: 'SkillsPage',
-      component: SkillsPage
-    },
+    // {
+    //   path: '/skills',
+    //   name: 'SkillsPage',
+    //   component: SkillsPage
+    // },
     {
       path: '/works',
       name: 'WorksPage',
@@ -39,10 +39,10 @@ export default new Router({
       name: 'ProfilePage',
       component: ProfilePage
     },
-    {
-      path: '/contact',
-      name: 'ContactPage',
-      component: ContactPage
-    }
+    // {
+    //   path: '/contact',
+    //   name: 'ContactPage',
+    //   component: ContactPage
+    // }
   ]
 })

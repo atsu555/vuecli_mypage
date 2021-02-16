@@ -11,14 +11,17 @@
                 <transition name="menu">
                   <div class="menu" v-show="ActiveBtn">
                       <ul>
-                          <!-- <li><a href="skills.html">スキル</a></li>
-                          <li><a href="works.html">制作物</a></li>
-                          <li><a href="profile.html">プロフィール</a></li> -->
-                          <li v-for="(item, index) in items" :key=index v-on:click='ActiveBtn=!ActiveBtn'>
+                          <li v-on:click='ActiveBtn=!ActiveBtn'><a href="#">Home</a></li>
+                          <li v-on:click='ActiveBtn=!ActiveBtn'><a href="#profile">Profile</a></li>
+                          <li v-on:click='ActiveBtn=!ActiveBtn'><a href="#service">Service</a></li>
+                          <li v-on:click='ActiveBtn=!ActiveBtn'><a href="#skills">Skills</a></li>
+                          <li v-on:click='ActiveBtn=!ActiveBtn'><a href="#works">Works</a></li>
+                          <li v-on:click='ActiveBtn=!ActiveBtn'><a href="#contact">Contact</a></li>
+                          <!-- <li v-for="(item, index) in items" :key=index v-on:click='ActiveBtn=!ActiveBtn'>
                               <router-link v-bind:to=item.path>
                                   {{ item.title }}
                               </router-link>
-                          </li>
+                          </li> -->
                       </ul>
                   </div>
                 </transition>
@@ -55,7 +58,7 @@ header h1{
 .hamburger_btn {
   position: fixed;
   top: 1.6rem;
-  left: 2rem;
+  right: 2rem;
   cursor: pointer;
   z-index: 50;
   width: 32px;
@@ -116,11 +119,11 @@ header h1{
   padding: 1rem;
 }
 .menu {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 30;
   padding: 2rem 1rem;
   position: fixed;
-  width: 100%;
+  width: 20%;
   height: 100vh;
   top: 0;
   right: 0;
@@ -128,14 +131,14 @@ header h1{
 .menu a {
   color: #fff;
   text-decoration: none;
-  font-size: 100px;
+  font-size: 30px;
   font-weight: 700;
-  text-shadow: 25px 25px 30px #fff;
+  text-shadow: 5px 5px 10px #fff;
   padding: 0 2rem;
 }
 .menu ul{
   text-align: center;
-  margin: 3rem 0;
+  margin: 2rem 0;
   padding: 0;
 }
 @media screen and (max-width: 900px){
@@ -145,7 +148,7 @@ header h1{
   }
   .hamburger_btn{
     top: 2rem;
-    right: 3rem;
+    right: 1.5rem;
   }
   .header-box {
     padding: 1rem 3rem 0;
@@ -176,13 +179,13 @@ export default {
   name: 'HeaderMenu',
   data () {
     return {
-      items: [
-        {title: 'Home', path: '/'},
-        {title: 'Profile', path: '/profile'},
-        {title: 'Service', path: '/service'},
-        {title: 'Skills', path: '/skills'},
-        {title: 'Works', path: '/works'}
-      ],
+  //     items: [
+  //       {title: 'Home', path: '/'},
+  //       {title: 'Profile', path: '/profile'},
+  //       {title: 'Service', path: '/service'},
+  //       {title: 'Skills', path: '/skills'},
+  //       {title: 'Works', path: '/works'}
+  //     ],
       ActiveBtn: false
     }
   }

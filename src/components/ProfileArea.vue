@@ -9,9 +9,7 @@
         >
         <div class="read-more">
           <h1>
-                  <router-link to="/profile">
-                      Profile
-                  </router-link>
+              Profile
           </h1>
         </div>
         </div>
@@ -27,22 +25,21 @@
             v-observe-visibility="visibilityChangedtext"
             v-bind:class="[isVisibletext === true ? 'fade1' : 'a']"
             class="col-md-5 profile-text">
-              <h3>Webデザイナー志望</h3>
+              <h3>Webエンジニア</h3>
               <p>
-                2018年3月に航空自衛隊に入隊。<br>
-                職種は調達で、主に防衛装備品の見積価格の査定や契約の締結、
-                納期交渉等を行なっていた。<br>
-                コロナウイルスの流行により、スキルを持つ人は異常時にも働く場所、時間
-                に囚われないと知り、私もそういう市場価値の高い人
-                間になりたいと思い、プログラミング学習を始める。<br>
-                本気でWeb業界で仕事をするために、2020年12月に航空自衛隊を退職。
+                初めまして。Webエンジニアの橘川夏隆と申します。<br>
+                現在フロントエンドを中心にWebサイト制作行なっております。<br>
+                「<span style="color: red; font-weight: bold">質</span>」と「<span style="color: red; font-weight: bold">スピード</span>」を重視することで、期待以上のものを提供させていただきます。<br>
+                また、クライアント様に寄り添った<span style="color: yellow; font-weight: bold">丁寧なコミュニケーション</span>を常に心がけ、
+                <span style="color: yellow; font-weight: bold">最後まで責任を持って</span>、仕事に取り組ませていただきます。
               </p>
             </div>
             <div
             v-observe-visibility="visibilityChangedme"
             v-bind:class="[isVisibleme === true ? 'fade2' : 'a']"
             class="col-md-7 profile-img">
-              <img src="../assets/my-picture1.png" alt="橘川" class="img-fluid">
+              <img src="../assets/my-picture1.png" alt="橘川" class="img-fluid pc">
+              <img src="../assets/mypicture2.png" alt="橘川" class="img-fluid sp">
             </div>
           </div>
         </div>
@@ -52,21 +49,22 @@
 </template>
 
 <style scoped>
+/* パソコンで見たときは"pc"のclassがついた画像が表示される */
+.pc { display: block !important; }
+.sp { display: none !important; }
+
+
+
 /* タイトルアンダーライン */
-.read-more a{
-  color: #fff;
-  text-decoration: none;
-  padding-bottom: 1rem;
-}
-.read-more a:after{
+.read-more :after{
   content: '';
 	width: 0;
 	transition: all 0.5s ease;
 	border-bottom: 3px solid #fff;
   display: block;
 }
-.read-more a:hover:after {
-	width: 50%;
+.read-more :hover:after {
+	width: 100%;
 	border-bottom: 3px solid #fff;
 }
 .title h1{
@@ -81,6 +79,7 @@
 #profile h1{
   text-align: left;
   padding-bottom: 5rem;
+  display: inline-block;
 }
 #profile h2{
   font-size: 85px;
@@ -104,6 +103,19 @@
   animation-duration:5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+}
+.profile-button{
+  padding-left: 1.5rem;
+}
+.profile-button a{
+  color: #000;
+  background-color: white;
+  padding: 1rem 3rem;
+  border-radius: 50px;
+  font-size: 20px;
+}
+.profile-button a:hover{
+  background-color: rgba(255,255,255,0.9);
 }
 @keyframes sample02 {
 0% {
@@ -214,20 +226,6 @@
   .profile-text{
     padding: 0.8rem;
   }
-  /* skills */
-  .img-box{
-    padding: 2rem;
-  }
-  .html-box, .ps-box, .js-box, .xd-box{
-    margin: 5rem auto;
-  }
-  .js-box, .ps-box, .xd-box{
-    margin-top: 0;
-  }
-  /* works */
-  .works-item1{
-    margin: 5rem auto;
-  }
 }
 @media screen and (max-width: 900px){
   .title h1{
@@ -249,34 +247,14 @@
   .profile-text{
     padding: 0.5rem;
   }
-  /* service */
-  .service-area{
-    flex-direction: column;
-    margin-top: 5rem;
-    text-align: center;
-  }
-  .service-item{
-    margin: 1rem 0;
-  }
-  /* contact */
-  .name{
-    width: 500px;
-    height: 60px;
-    font-size: 1.3rem;
-    padding-left: 1rem;
-    margin-bottom: 2rem;
-  }
-  .message{
-    width: 500px;
-    height: 300px;
-    font-size: 1.3rem;
-    padding: 0.5rem 0 0 1rem;
-    margin-bottom: 2rem;
-  }
 }
 @media screen and (max-width: 767px){
-  .profile-img{
-    display: none;
+  /* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
+  .pc {
+    display: none !important;
+  }
+  .sp {
+    display: block !important;
   }
 }
 @media screen and (max-width: 500px){
@@ -288,6 +266,12 @@
     text-shadow: 18px 18px 20px #fff;
   }
 
+  .profile-text{
+    order: 2;
+  }
+  .profile-img{
+    order: 1;
+  }
   /* profile */
   #profile h2{
     font-size: 60px;
