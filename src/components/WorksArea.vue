@@ -38,6 +38,89 @@
         <div slot="button-prev" class="swiper-button-prev"></div>
         <div slot="button-next" class="swiper-button-next"></div>
       </swiper>
+
+
+      <div class="landing-contents">
+        <div class="description">
+          <div v-if="show1">
+            <h2>合同会社Day Produce様　HP(実務)</h2>
+            <p>
+              担当したところはコーディングとデザインです。
+            </p>
+            <div class="use-skill">
+              <h2>使用スキル</h2>
+              <ul>
+                <li class="tag-html">HTML</li>
+                <li class="tag-css">CSS</li>
+                <li class="tag-ps">Photoshop</li>
+                <li class="tag-xd">XD</li>
+              </ul>
+            </div>
+          </div>
+          <div v-else-if="show2">
+            <h2>矯正歯科LP</h2>
+            <p>
+              説明が入ります。説明が入ります。説明が入ります。説明が入ります。
+              説明が入ります。説明が入ります。説明が入ります。説明が入ります。
+              説明が入ります。説明が入ります。説明が入ります。説明が入ります。
+              説明が入ります。説明が入ります。説明が入ります。
+            </p>
+            <div class="use-skill">
+              <h2>使用スキル</h2>
+              <ul>
+                <li class="tag-html">HTML</li>
+                <li class="tag-css">CSS</li>
+                <li class="tag-js">JavaScirpt</li>
+              </ul>
+            </div>
+          </div>
+          <div v-else-if="show3">
+            <h2>スクールLP</h2>
+            <p>
+              説明が入ります。説明が入ります。説明が入ります。説明が入ります。
+              説明が入ります。説明が入ります。説明が入ります。説明が入ります。
+              説明が入ります。説明が入ります。説明が入ります。説明が入ります。
+              説明が入ります。説明が入ります。説明が入ります。
+            </p>
+            <div class="use-skill">
+              <h2>使用スキル</h2>
+              <ul>
+                <li class="tag-html">HTML</li>
+                <li class="tag-css">CSS</li>
+                <li class="tag-js">JavaScirpt</li>
+                <li class="tag-ps">Photoshop</li>
+                <li class="tag-xd">XD</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="landing-box">
+          <div class="lp-img">
+            <div v-if="show1" class="landing-img">
+              <img src="../assets/schoolLP.jpg" alt="デザインスクール" class="img-fluid">
+            </div>
+            <div v-else-if="show2" class="landing-img">
+              <img src="../assets/dental.jpg" alt="デザインスクール" class="img-fluid">
+            </div>
+            <div v-else-if="show3" class="landing-img">
+              <img src="../assets/img1.jpg" alt="デザインスクール" class="img-fluid">
+            </div>
+          </div>
+            <div class="thumbnails">
+              <ul>
+                <li v-on:click="thumbnailBtn1">
+                  <img src="../assets/schoolLP.jpg" alt="デザインスクール" class="img-fluid"/>
+                </li>
+                <li v-on:click="thumbnailBtn2">
+                  <img src="../assets/dental.jpg" alt="デザインスクール" class="img-fluid"/>
+                </li>
+                <li v-on:click="thumbnailBtn3">
+                  <img src="../assets/img1.jpg" alt="デザインスクール" class="img-fluid"/>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -113,6 +196,93 @@
 
 .swiper-button-prev, .swiper-button-next{
   color: #fff;
+}
+
+/* workspage */
+.works-contents{
+  text-align: center;
+  padding: 5rem 0;
+}
+.works-contents h1{
+  text-align: left;
+}
+.works-contents a{
+  color: #fff;
+}
+
+.landing-contents{
+  display: flex;
+  margin: 3rem 0;
+  width: 100%;
+}
+.description{
+  border: solid 1px white;
+  flex: 1;
+  padding: 0.5rem;
+  text-align: left;
+}
+.description h2{
+  font-size: 1.8rem;
+  margin: 2rem 0;
+}
+.description p{
+  padding: 0 0.5rem;
+}
+.use-skill ul{
+  list-style: none;
+  padding: 0 0.5rem;
+}
+.use-skill li{
+  padding: 3px;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+.tag-html{
+  background-color: #F08A53;
+  border-radius: 30px;
+}
+.tag-css{
+  background-color: #21ACD6;
+  border-radius: 30px;
+}
+.tag-js{
+  background-color: #E6E637;
+  border-radius: 30px;
+}
+.tag-ps{
+  background-color: #17202C;
+  border-radius: 30px;
+  color: #3D94DE;
+}
+.tag-xd{
+  background-color: #271525;
+  border-radius: 30px;
+  color: #E54CE5;
+}
+.landing-box{
+  flex: 4;
+  margin: 0 1rem;
+}
+.landing-img{
+  margin: 0.6rem 0;
+}
+.thumbnails ul{
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+.thumbnails li{
+  margin: 0.5rem 0.5rem 0 0;
+}
+.thumbnails li:last-child{
+  margin-right: 0;
+}
+.thumbnails img{
+  object-fit: cover;
+  width: 280px;
+  height: 160px;
 }
 
 
@@ -332,6 +502,11 @@ export default {
   name: 'WorksArea',
   data (){
     return {
+        show1: true,
+        show2: false,
+        show3: false,
+        isVisibletitle: false,
+        isVisiblelp: false,
         isVisible03: false,
         swiperOption: {
         speed: 2000,//スライドの切り替わりスピード
@@ -357,6 +532,27 @@ export default {
   methods: {
       visibilityChanged03 (isVisible03, entry) {
         this.isVisible03 = isVisible03
+      },
+      visibilityChangedtitle (isVisibletitle, entry) {
+        this.isVisibletitle = isVisibletitle
+      },
+      visibilityChangedlp (isVisiblelp, entry) {
+        this.isVisiblelp = isVisiblelp
+      },
+      thumbnailBtn1: function(){
+          this.show1 = true,
+          this.show2 = false,
+          this.show3 = false
+      },
+      thumbnailBtn2: function(){
+          this.show2 = true,
+          this.show1 = false,
+          this.show3 = false
+      },
+      thumbnailBtn3: function(){
+          this.show3 = true,
+          this.show1 = false,
+          this.show2 = false
       }
   }
   }

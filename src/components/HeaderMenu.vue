@@ -11,7 +11,6 @@
                 <transition name="menu">
                   <div class="menu" v-show="ActiveBtn">
                       <ul>
-                          <li v-on:click='ActiveBtn=!ActiveBtn'><a href="#">Home</a></li>
                           <li v-on:click='ActiveBtn=!ActiveBtn'><a href="#profile">Profile</a></li>
                           <li v-on:click='ActiveBtn=!ActiveBtn'><a href="#service">Service</a></li>
                           <li v-on:click='ActiveBtn=!ActiveBtn'><a href="#skills">Skills</a></li>
@@ -153,6 +152,14 @@ header h1{
   .header-box {
     padding: 1rem 3rem 0;
   }
+  .menu {
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 30;
+    padding: 2rem 1rem;
+    position: fixed;
+    width: 30%;
+  }
+
 }
 @media screen and (max-width: 500px){
   /* ヘッダー */
@@ -163,13 +170,16 @@ header h1{
     top: 1.6rem;
   }
   .menu a {
-    font-size: 65px;
+    font-size: 25px;
     font-weight: 700;
     text-shadow: 20px 20px 20px #fff;
     padding: 0 2rem;
   }
   .main-img img{
     margin-top: 3rem;
+  }
+  .menu {
+    width: 100%;
   }
 }
 </style>
