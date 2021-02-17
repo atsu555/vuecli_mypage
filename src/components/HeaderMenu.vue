@@ -30,6 +30,13 @@
 
 <style scoped>
 /* header */
+header{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
 header h1, header a{
   color: #fff;
 }
@@ -41,22 +48,13 @@ header h1{
   font-weight: 300;
   margin: 0;
 }
-.header-box{
-  padding: 3rem 8rem 0;
-  width: 100%;
-}
-.header-menu ul{
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding-top: 1.5rem;
-}
+
 
 
 /* hamburgerbutton */
 .hamburger_btn {
   position: fixed;
-  top: 1.6rem;
+  top: 2rem;
   right: 2rem;
   cursor: pointer;
   z-index: 50;

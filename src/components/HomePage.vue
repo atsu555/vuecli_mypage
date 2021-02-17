@@ -2,7 +2,7 @@
   <div class="top-page">
     <div class="main-img">
       <img src="../assets/topimg.jpg" alt="バイク" class="pc img-fluid">
-      <img src="../assets/topimg-2.jpg" alt="バイク" class="md img-fluid">
+      <img src="../assets/topimg-4.jpg" alt="バイク" class="md img-fluid">
       <img src="../assets/topimg-3.jpg" alt="バイク" class="sp img-fluid">
     </div>
     <!-- プロフィール -->
@@ -23,7 +23,7 @@
 .pc { display: block !important; }
 .md { display: none !important; }
 .sp { display: none !important; }
-@media screen and (max-width: 800px){
+@media screen and (max-width: 1024px){
   /* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
   .pc {
     display: none !important;
@@ -39,6 +39,16 @@
   }
   .sp {
     display: block !important;
+  }
+  .main-img img{
+    height: auto !important;
+    object-fit: cover;
+  }
+}
+@media screen and (max-width: 375px){
+  .main-img img{
+    object-fit: fill !important;
+    height: 100vh !important;
   }
 }
 .img-250{
@@ -182,8 +192,8 @@
 
 @media screen and (max-width: 1200px){
   .main-img img{
-    height: auto;
-    object-fit: cover;
+    /* height: auto; */
+    object-fit: fill;
   }
   #profile h2{
     font-size: 80px;
