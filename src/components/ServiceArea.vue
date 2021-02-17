@@ -102,7 +102,7 @@
 }
 /* service */
 #service{
-  padding: 10rem 0;
+  padding: 5rem 0;
 }
 #service h1{
   display: inline-block;

@@ -74,7 +74,7 @@
 }
 /* profile */
 #profile{
-  padding: 10rem 0;
+  padding: 10rem 0 5rem;
 }
 #profile h1{
   text-align: left;

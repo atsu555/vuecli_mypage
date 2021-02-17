@@ -1,5 +1,6 @@
 <template>
   <div class="top-page">
+    <Loading v-show="loading"></Loading>
     <div class="main-img">
       <img src="../assets/topimg.jpg" alt="バイク" class="pc img-fluid">
       <img src="../assets/topimg-4.jpg" alt="バイク" class="md img-fluid">
@@ -383,6 +384,7 @@ import ServiceArea from '@/components/ServiceArea'
 import SkillsArea from '@/components/SkillsArea'
 import WorksArea from '@/components/WorksArea'
 import ContactArea from '@/components/ContactArea'
+// import Loading from '@/components/Loading'
 export default {
   components: {
     ProfileArea,
@@ -394,6 +396,7 @@ export default {
   name: 'HomePage',
   data (){
     return {
+        // loading: true,
         isVisible01: false,
         isVisible02: false,
         isVisible03: false,
@@ -476,6 +479,11 @@ export default {
       visibilityChangedxd (isVisiblexd, entry) {
         this.isVisiblexd = isVisiblexd
       }
-  }
+  },
+  // mounted() {
+  //   setTimeout(() => {
+  //     this.loading = false;
+  //   }, 2000);
+  // }
 }
 </script>

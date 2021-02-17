@@ -110,7 +110,7 @@
 }
 /* skills */
 #skills{
-  padding: 10rem 0;
+  padding: 5rem 0;
 }
 #skills h1{
   padding-bottom: 2rem;

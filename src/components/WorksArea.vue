@@ -30,6 +30,13 @@
                   </p>
                 </div>
               </a>
+              <div class="caption2">
+                <p>
+                  【Category】実案件<br>
+                  【Title】合同会社Day Produce様ホームページ<br>
+                  【Skill】HTML / CSS / JQuery / WordPress / Photoshop /XD<br>
+                </p>
+              </div>
             </div>
         </swiper-slide>
         <swiper-slide>
@@ -46,6 +53,13 @@
                   </p>
                 </div>
               </a>
+              <div class="caption2">
+                <p>
+                  【Category】オリジナルサイト<br>
+                  【Title】Kikkawa Atsutaka Portofolio<br>
+                  【Skill】HTML / CSS / Vue.js / WordPress / Photoshop /XD<br>
+                </p>
+              </div>
             </div>
         </swiper-slide>
         <!-- <div class="swiper-pagination" slot="pagination"></div> -->
@@ -81,7 +95,7 @@
 }
 /* works */
 #works{
-  padding: 10rem 0;
+  padding: 5rem 0;
 }
 #works h1{
   display: inline-block;
@@ -170,93 +184,45 @@
 .swiper-button-prev, .swiper-button-next{
   color: #fff;
 }
+.caption2{
+  display: none;
+}
+.swiper-button-next::after{
+  outline: none;
+}
+.swiper-button-prev::after{
+  outline: none;
+}
+@media screen and (max-width: 1024px){
+  .caption2{
+    display: block;
+    font-size: 15px;
+    margin-top: 10px;
+  }
+  .caption{
+    display: none;
+  }
+}
+@media screen and (max-width: 500px){
+  .caption2{
+    display: block;
+    font-size: 10px;
+  }
+  .swiper-button-prev{
+    top: 45%;
+  }
+  .swiper-button-next{
+    top: 45%;
+  }
+  .swiper-button-prev::after{
+    font-size: 25px;
+  }
+  .swiper-button-next::after{
+    font-size: 25px;
+  }
+}
 
-/* workspage */
-.works-contents{
-  text-align: center;
-  padding: 5rem 0;
-}
-.works-contents h1{
-  text-align: left;
-}
-.works-contents a{
-  color: #fff;
-}
 
-.landing-contents{
-  display: flex;
-  margin: 3rem 0;
-  width: 100%;
-}
-.description{
-  border: solid 1px white;
-  flex: 1;
-  padding: 0.5rem;
-  text-align: left;
-}
-.description h2{
-  font-size: 1.8rem;
-  margin: 2rem 0;
-}
-.description p{
-  padding: 0 0.5rem;
-}
-.use-skill ul{
-  list-style: none;
-  padding: 0 0.5rem;
-}
-.use-skill li{
-  padding: 3px;
-  width: 100px;
-  height: 30px;
-  text-align: center;
-  margin: 0.5rem 0;
-}
-.tag-html{
-  background-color: #F08A53;
-  border-radius: 30px;
-}
-.tag-css{
-  background-color: #21ACD6;
-  border-radius: 30px;
-}
-.tag-js{
-  background-color: #E6E637;
-  border-radius: 30px;
-}
-.tag-ps{
-  background-color: #17202C;
-  border-radius: 30px;
-  color: #3D94DE;
-}
-.tag-xd{
-  background-color: #271525;
-  border-radius: 30px;
-  color: #E54CE5;
-}
-.landing-box{
-  flex: 4;
-  margin: 0 1rem;
-}
-.landing-img{
-  margin: 0.6rem 0;
-}
-.thumbnails ul{
-  list-style: none;
-  display: flex;
-  padding: 0;
-}
-.thumbnails li{
-  margin: 0.5rem 0.5rem 0 0;
-}
-.thumbnails li:last-child{
-  margin-right: 0;
-}
-.thumbnails img{
-  object-fit: cover;
-  width: 280px;
-  height: 160px;
-}
 
 
 /* アニメーション */
