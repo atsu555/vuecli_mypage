@@ -1,27 +1,46 @@
 <template>
   <div class="top-page">
     <div class="main-img">
-      <img src="../assets/topimg.jpg" alt="バイク" class="img-fluid">
+      <img src="../assets/topimg.jpg" alt="バイク" class="pc img-fluid">
+      <img src="../assets/topimg-2.jpg" alt="バイク" class="md img-fluid">
+      <img src="../assets/topimg-3.jpg" alt="バイク" class="sp img-fluid">
     </div>
-
     <!-- プロフィール -->
     <profile-area></profile-area>
-
     <!-- サービス -->
     <service-area></service-area>
-
     <!-- スキル -->
     <skills-area></skills-area>
-
     <!-- works -->
     <works-area></works-area>
-
     <!-- contact -->
     <contact-area></contact-area>
   </div> <!-- toppage-->
 </template>
 
 <style scoped>
+/* パソコンで見たときは"pc"のclassがついた画像が表示される */
+.pc { display: block !important; }
+.md { display: none !important; }
+.sp { display: none !important; }
+@media screen and (max-width: 800px){
+  /* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
+  .pc {
+    display: none !important;
+  }
+  .md {
+    display: block !important;
+  }
+}
+@media screen and (max-width: 500px){
+  /* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
+  .md {
+    display: none !important;
+  }
+  .sp {
+    display: block !important;
+  }
+}
 .img-250{
   width: 250px;
   height: 250px;
@@ -164,7 +183,6 @@
 @media screen and (max-width: 1200px){
   .main-img img{
     height: auto;
-    width: 100%;
     object-fit: cover;
   }
   #profile h2{

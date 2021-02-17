@@ -14,113 +14,45 @@
       <swiper
         ref="mySwiper"
         :options="swiperOption"
-        class="slide"
+
       >
         <swiper-slide>
-          <a href="">
-            <img src="../assets/schoolLP.jpg" alt="デザインスクール" class="img-fluid">
-            <h2>WebデザインスクールLP</h2>
-          </a>
+            <div class="slide">
+              <a href="#">
+                <img src="../assets/schoolLP.jpg" alt="デザインスクール" class="img-fluid">
+                <div class="mask1"></div>
+                <div class="mask2"></div>
+                <div class="caption">
+                  <p>
+                    【Category】実案件<br><br>
+                    【Title】合同会社Day Produce様ホームページ<br><br>
+                    【Skill】HTML / CSS / JQuery / WordPress / Photoshop /XD<br><br>
+                  </p>
+                </div>
+              </a>
+            </div>
         </swiper-slide>
         <swiper-slide>
-          <a href="">
-            <img src="../assets/dental.jpg" alt="歯科LP" class="img-fluid">
-            <h2>歯科矯正LP</h2>
-          </a>
-        </swiper-slide>
-        <swiper-slide>
-          <a href="">
-            <img src="../assets/img1.jpg" alt="バイク" class="img-fluid">
-            <h2>バイク</h2>
-          </a>
+            <div class="slide">
+              <a href="#">
+                <img src="../assets/portfoliosite.jpg" alt="デザインスクール" class="img-fluid">
+                <div class="mask1"></div>
+                <div class="mask2"></div>
+                <div class="caption">
+                  <p>
+                    【Category】オリジナルサイト<br><br>
+                    【Title】Kikkawa Atsutaka Portofolio<br><br>
+                    【Skill】HTML / CSS / Vue.js / WordPress / Photoshop /XD<br><br>
+                  </p>
+                </div>
+              </a>
+            </div>
         </swiper-slide>
         <!-- <div class="swiper-pagination" slot="pagination"></div> -->
         <div slot="button-prev" class="swiper-button-prev"></div>
         <div slot="button-next" class="swiper-button-next"></div>
       </swiper>
 
-
-      <div class="landing-contents">
-        <div class="description">
-          <div v-if="show1">
-            <h2>合同会社Day Produce様　HP(実務)</h2>
-            <p>
-              担当したところはコーディングとデザインです。
-            </p>
-            <div class="use-skill">
-              <h2>使用スキル</h2>
-              <ul>
-                <li class="tag-html">HTML</li>
-                <li class="tag-css">CSS</li>
-                <li class="tag-ps">Photoshop</li>
-                <li class="tag-xd">XD</li>
-              </ul>
-            </div>
-          </div>
-          <div v-else-if="show2">
-            <h2>矯正歯科LP</h2>
-            <p>
-              説明が入ります。説明が入ります。説明が入ります。説明が入ります。
-              説明が入ります。説明が入ります。説明が入ります。説明が入ります。
-              説明が入ります。説明が入ります。説明が入ります。説明が入ります。
-              説明が入ります。説明が入ります。説明が入ります。
-            </p>
-            <div class="use-skill">
-              <h2>使用スキル</h2>
-              <ul>
-                <li class="tag-html">HTML</li>
-                <li class="tag-css">CSS</li>
-                <li class="tag-js">JavaScirpt</li>
-              </ul>
-            </div>
-          </div>
-          <div v-else-if="show3">
-            <h2>スクールLP</h2>
-            <p>
-              説明が入ります。説明が入ります。説明が入ります。説明が入ります。
-              説明が入ります。説明が入ります。説明が入ります。説明が入ります。
-              説明が入ります。説明が入ります。説明が入ります。説明が入ります。
-              説明が入ります。説明が入ります。説明が入ります。
-            </p>
-            <div class="use-skill">
-              <h2>使用スキル</h2>
-              <ul>
-                <li class="tag-html">HTML</li>
-                <li class="tag-css">CSS</li>
-                <li class="tag-js">JavaScirpt</li>
-                <li class="tag-ps">Photoshop</li>
-                <li class="tag-xd">XD</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="landing-box">
-          <div class="lp-img">
-            <div v-if="show1" class="landing-img">
-              <img src="../assets/schoolLP.jpg" alt="デザインスクール" class="img-fluid">
-            </div>
-            <div v-else-if="show2" class="landing-img">
-              <img src="../assets/dental.jpg" alt="デザインスクール" class="img-fluid">
-            </div>
-            <div v-else-if="show3" class="landing-img">
-              <img src="../assets/img1.jpg" alt="デザインスクール" class="img-fluid">
-            </div>
-          </div>
-            <div class="thumbnails">
-              <ul>
-                <li v-on:click="thumbnailBtn1">
-                  <img src="../assets/schoolLP.jpg" alt="デザインスクール" class="img-fluid"/>
-                </li>
-                <li v-on:click="thumbnailBtn2">
-                  <img src="../assets/dental.jpg" alt="デザインスクール" class="img-fluid"/>
-                </li>
-                <li v-on:click="thumbnailBtn3">
-                  <img src="../assets/img1.jpg" alt="デザインスクール" class="img-fluid"/>
-                </li>
-              </ul>
-            </div>
-        </div>
-      </div>
     </div>
   </div>
 </template>
@@ -174,7 +106,9 @@
   font-weight: 300;
 }
 .slide{
-  margin: 10rem 0;
+  margin: 5rem 0;
+  position: relative;
+  text-align: center;
 }
 .slide a{
   color: #fff;
@@ -182,13 +116,52 @@
 }
 .slide a:hover{
   text-decoration: none;
-  opacity: 0.8;
+}
+.caption{
+  visibility: hidden;
+  position: absolute;
+  top: 15vh;
+  left: 17vw;
+  -webkit-transition:	all 0.4s step-end;
+	transition:		all 0.4s step-end;
+}
+.caption p{
+  opacity: 0;
+  font-size: 150%;
+}
+.mask1, .mask2{
+  width:			50%;	/* 幅は半部のサイズ */
+	height:			100%;
+	position:		absolute;
+	top:			0;
+	background-color:	rgba(0,0,0,0.7);
+	-webkit-transition:	all .6s ease;
+	transition:		all .6s ease;
+}
+.mask1{
+  left:	-50%;
+  visibility: hidden;
+}
+.mask2{
+  right: -50%;
+  visibility: hidden;
+}
+.slide a:hover .mask1{
+	left:	0px;	/* 左にずらして表示する */
+  visibility: visible;
+}
+.slide a:hover .mask2 {
+	right:	0px;	/* 左にずらして表示する */
+  visibility: visible;
 }
 .slide a:hover .caption{
   visibility: visible;
 }
+.slide a:hover .caption p{
+  opacity: 1;
+}
 .slide img{
-  padding: 3rem 5rem;
+  width: 50vw;
 }
 .slide h2{
   padding: 0;
@@ -502,9 +475,6 @@ export default {
   name: 'WorksArea',
   data (){
     return {
-        show1: true,
-        show2: false,
-        show3: false,
         isVisibletitle: false,
         isVisiblelp: false,
         isVisible03: false,
@@ -514,10 +484,10 @@ export default {
         centeredSlides: true,//スライダーを真ん中に
         loop: true, //無限ループ
         slidesPerView: 1,
-        autoplay: { //スライドの自動切り替え
-          delay: 1000,//スライドの自動切り替えの秒数
-          disableOnInteraction: false//何らかのアクション後の自動切り替えを再開
-        },
+        // autoplay: { //スライドの自動切り替え
+        //   delay: 1000,//スライドの自動切り替えの秒数
+        //   disableOnInteraction: false//何らかのアクション後の自動切り替えを再開
+        // },
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev'
@@ -538,21 +508,6 @@ export default {
       },
       visibilityChangedlp (isVisiblelp, entry) {
         this.isVisiblelp = isVisiblelp
-      },
-      thumbnailBtn1: function(){
-          this.show1 = true,
-          this.show2 = false,
-          this.show3 = false
-      },
-      thumbnailBtn2: function(){
-          this.show2 = true,
-          this.show1 = false,
-          this.show3 = false
-      },
-      thumbnailBtn3: function(){
-          this.show3 = true,
-          this.show1 = false,
-          this.show2 = false
       }
   }
   }

@@ -14,46 +14,71 @@
         <div class="skills-area">
           <div
           v-observe-visibility="visibilityChangedhtml"
-          v-bind:class="[isVisiblehtml === true ? 'fade2' : 'a']"
+          v-bind:class="[isVisiblehtml === true ? 'fade4' : 'a']"
           class="skills-data html-box">
             <div class="img-box">
               <img src="../assets/icon-htmlcss.png" art="HTML" class="img-fluid">
             </div>
             <div class="text-box">
               <h2>HTML5/CSS3</h2>
+              <p>
+                レスポンシブサイトのコーディング。正しい文法で、UXが高く、
+                コードがDRYで保守が容易な、SEOにも配慮したサイトをつくります。
+              </p>
             </div>
           </div>
           <div
           v-observe-visibility="visibilityChangedjs"
-          v-bind:class="[isVisiblejs === true ? 'fade1' : 'a']"
+          v-bind:class="[isVisiblejs === true ? 'fade4' : 'a']"
           class="skills-data js-box">
             <div class="img-box">
               <img src="../assets/icon-javascript.png" art="JavaScript" class="img-fluid">
             </div>
             <div class="text-box">
               <h2>JavaScript</h2>
+              <p>
+                jQueryを使用して、サイトに動きをつけたりすることができます。
+                本サイトに関しては、Vue.jsを使って環境構築をし実装しました。
+              </p>
             </div>
           </div>
           <div
           v-observe-visibility="visibilityChangedps"
-          v-bind:class="[isVisibleps === true ? 'fade2' : 'a']"
+          v-bind:class="[isVisibleps === true ? 'fade4' : 'a']"
           class="skills-data ps-box">
             <div class="img-box">
               <img src="../assets/icon-photoshop.png" art="Photoshop" class="img-fluid">
             </div>
             <div class="text-box">
               <h2>Adobe Photoshop</h2>
+              <p>基本的なツールを使用して、画像の加工やバナー制作を行います。</p>
             </div>
           </div>
           <div
           v-observe-visibility="visibilityChangedxd"
-          v-bind:class="[isVisiblexd === true ? 'fade1' : 'a']"
+          v-bind:class="[isVisiblexd === true ? 'fade4' : 'a']"
           class="skills-data xd-box">
             <div class="img-box">
               <img src="../assets/icon-xd.png" art="XD" class="img-fluid">
             </div>
             <div class="text-box">
               <h2>Adobe XD</h2>
+              <p>基本的なツールを使用して、ワイヤーフレームの作成をします。</p>
+            </div>
+          </div>
+          <div
+          v-observe-visibility="visibilityChangedwd"
+          v-bind:class="[isVisiblewd === true ? 'fade4' : 'a']"
+          class="skills-data wd-box">
+            <div class="img-box">
+              <img src="../assets/wordpress-icon.png" art="XD" class="img-fluid">
+            </div>
+            <div class="text-box">
+              <h2>WordPress</h2>
+              <p>
+                サイトの構築からオリジナルテーマも作成することができます。
+                サイトの運営についてもサポートします。
+              </p>
             </div>
           </div>
         </div>
@@ -109,10 +134,10 @@
 .text-box p{
   line-height: 1.8;
 }
-.html-box, .ps-box{
+.html-box, .ps-box, .wd-box{
   margin: 0 0 0 auto;
 }
-.js-box, .ps-box, .xd-box{
+.js-box, .ps-box, .xd-box, .wd-box{
   margin-top: -15rem;
 }
 #skills .read-more a:hover:after {
@@ -155,7 +180,7 @@
 @keyframes my-text{
   0%{
     opacity: 0;
-    transform: translateX(-200px)
+    transform: translateX(-100px)
   }
   100%{
     opacity: 1;
@@ -173,7 +198,7 @@
 @keyframes my-picture{
   0%{
     opacity: 0;
-    transform: translateX(200px)
+    transform: translateX(100px)
   }
   100%{
     opacity: 1;
@@ -242,10 +267,10 @@
   .img-box{
     padding: 2rem;
   }
-  .html-box, .ps-box, .js-box, .xd-box{
+  .html-box, .ps-box, .js-box, .xd-box, .wd-box{
     margin: 5rem auto;
   }
-  .js-box, .ps-box, .xd-box{
+  .js-box, .ps-box, .xd-box, .wd-box{
     margin-top: 0;
   }
   /* works */
@@ -330,7 +355,9 @@ export default {
         isVisiblehtml: false,
         isVisiblejs: false,
         isVisibleps: false,
-        isVisiblexd: false
+        isVisiblexd: false,
+        isVisiblewd: false,
+
     }
   },
   methods: {
@@ -348,6 +375,9 @@ export default {
       },
       visibilityChangedxd (isVisiblexd, entry) {
         this.isVisiblexd = isVisiblexd
+      },
+      visibilityChangedwd (isVisiblewd, entry) {
+        this.isVisiblewd = isVisiblewd
       }
   }
   }

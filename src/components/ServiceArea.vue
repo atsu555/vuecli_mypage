@@ -177,7 +177,7 @@
 @keyframes my-text{
   0%{
     opacity: 0;
-    transform: translateX(-200px)
+    transform: translateX(-100px)
   }
   100%{
     opacity: 1;
@@ -195,7 +195,7 @@
 @keyframes my-picture{
   0%{
     opacity: 0;
-    transform: translateX(200px)
+    transform: translateX(100px)
   }
   100%{
     opacity: 1;
